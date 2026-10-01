@@ -4,25 +4,21 @@ Scraper for Artificial Analysis LLM Leaderboard.
 
 Extracts the full model dataset from the Next.js RSC payload embedded in the page.
 
-V18 (2026-09-12): the RSC payload no longer carries the old 96-field array —
-AA now splits the data across TWO `models` arrays:
-  * the main benchmark array (~50 fields: all evaluation scores, pricing,
-    speed/latency, creator color/logo/name, paramClass, …)
-  * a display-metadata array (8 fields: slug, name, releaseDate, deprecated,
-    isReasoning, effort, release, creator{id,name,logo})
-The scraper picks the richest array as `main` and merges the metadata
-fields (name, releaseDate) into it by `slug`, restoring the old `name` field.
+V19 (2026-10-01): AA changed the payload again. The benchmark array no longer
+carries releaseDate at all. Dates now live in a separate `releases` array
+inside `modelsAndReleases`:
+  * benchmark array (~50 fields: scores, pricing, speed, creator, ... + slug,
+    releaseSlug? no date)
+  * modelsAndReleases.models: [{slug, name, releaseSlug}] (688 entries, 3 fields)
+  * modelsAndReleases.releases: [{slug, name, deprecated, releaseDate,
+    creator{slug,name,logo}}] (499 entries, one per release; multiple model
+    variants share one releaseSlug, e.g. gpt-6-sol-low -> gpt-6-sol)
+The scraper joins releaseSlug -> releases[slug].releaseDate and writes
+`releaseDate` back onto each benchmark model, restoring the field analyze.py
+expects. Verified 688/688 join coverage on 2026-10-01 snapshot.
 
-Fields AA removed from the models payload since v17: agenticIndex,
-codingIndex (AA Agentic / Coding Index), intelligenceIndexCostTotal, blended
-prices, modelCreatorSlug, cweBench, mlcrOverall, … New benchmark columns
-now carried: analystAgent, tauBanking (τ³-Bench Banking),
-terminalbenchV21 / terminalbenchV40 ("Intelligence Index v4.3: … 𝜏³-Banking
-is removed, and Terminal-Bench moves to v4.0").
-
-The RSC payload contains EVERY model regardless of the page's Status filter
-(Current / All) — including deprecated ones (`deprecated: true`), which
-analyze.py keeps (Status: All) as of Version 10.
+The RSC payload contains EVERY model regardless of the page Status filter,
+including deprecated ones, which analyze.py keeps (Status: All).
 """
 
 import json
@@ -37,53 +33,62 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "raw_data.json")
 MIN_MODELS_EXPECTED = 100
 
-# JavaScript code shared across extraction approaches
-_SEARCH_MODELS_JS = """
-function _findBestModels(obj, maxDepth) {
-  let best = null;
-  let bestFC = 0;
+_SEARCH_ALL_JS = """
+function _findAllModels(obj, maxDepth) {
+  const out = [];
   function search(o, d) {
-    if (d > maxDepth || !o || typeof o !== 'object') return;
+    if (d > maxDepth || !o || typeof o !== "object") return;
     if (!Array.isArray(o) && o.models && Array.isArray(o.models) && o.models.length > 0) {
-      const fc = Object.keys(o.models[0]).length;
-      if (fc > bestFC) { bestFC = fc; best = o.models; }
+      out.push(o.models);
     }
     if (Array.isArray(o)) for (const v of o) search(v, d + 1);
     else for (const v of Object.values(o)) search(v, d + 1);
   }
   search(obj, 0);
-  return best;
+  return out;
+}
+function _findAllReleases(obj, maxDepth) {
+  const out = [];
+  function search(o, d) {
+    if (d > maxDepth || !o || typeof o !== "object") return;
+    if (!Array.isArray(o) && o.releases && Array.isArray(o.releases) && o.releases.length > 0) {
+      const r0 = o.releases[0];
+      if (r0 && typeof r0 === "object" && r0.slug && r0.releaseDate) {
+        out.push(o.releases);
+      }
+    }
+    if (Array.isArray(o)) for (const v of o) search(v, d + 1);
+    else for (const v of Object.values(o)) search(v, d + 1);
+  }
+  search(obj, 0);
+  return out;
 }
 """
 
-# Primary extraction: parse RSC script tags directly.
-# V18: collect ALL `models` arrays (main benchmark array + metadata arrays),
-# so the Python side can merge them by slug.
 EXTRACT_JS = """
 (() => {
-  ${SEARCH}
-  const scripts = document.querySelectorAll('script');
-  const found = [];
-
+  SEARCH
+  const scripts = document.querySelectorAll("script");
+  const modelsFound = [];
+  const releasesFound = [];
   for (let i = 0; i < scripts.length; i++) {
-    const text = scripts[i].textContent || '';
-    if (!text.includes('__next_f') || !text.includes('models')) continue;
-
+    const text = scripts[i].textContent || "";
+    if (!text.includes("__next_f")) continue;
+    if (!text.includes("models") && !text.includes("releases")) continue;
     const match = text.match(/^self\\.__next_f\\.push\\((.+)\\)$/s);
     if (!match) continue;
-
     try {
       const arr = eval(match[1]);
       const content = arr[1];
-      const colonIdx = content.indexOf(':');
+      const colonIdx = content.indexOf(":");
       const data = JSON.parse(content.substring(colonIdx + 1));
-      const m = _findBestModels(data, 25);
-      if (m) found.push(m);
-    } catch(e) { /* skip */ }
+      for (const m of _findAllModels(data, 25)) modelsFound.push(m);
+      for (const r of _findAllReleases(data, 25)) releasesFound.push(r);
+    } catch(e) { /* skip chunk */ }
   }
-  return JSON.stringify(found);
+  return JSON.stringify({models: modelsFound, releases: releasesFound});
 })()
-""".replace("${SEARCH}", _SEARCH_MODELS_JS)
+""".replace("SEARCH", _SEARCH_ALL_JS)
 
 
 def scrape_leaderboard():
@@ -95,25 +100,30 @@ def scrape_leaderboard():
 
         print(f"[1/3] Navigating to {URL} ...")
         page.goto(URL, wait_until="networkidle", timeout=90000)
-        page.wait_for_timeout(8000)  # Wait for RSC stream to complete
+        page.wait_for_timeout(8000)
 
         print("[2/3] Extracting model data from RSC payload ...")
         raw_json = page.evaluate(EXTRACT_JS)
+        payload = json.loads(raw_json)
+        # Backward compat: very old payloads returned a bare list of models arrays
+        if isinstance(payload, list):
+            models_arrays = payload
+            releases_arrays = []
+        else:
+            models_arrays = payload.get("models", [])
+            releases_arrays = payload.get("releases", [])
+        print(f"  models arrays found: {len(models_arrays)} "
+              f"({[len(a) for a in models_arrays]} models, "
+              f"{[len(a[0].keys()) if a else 0 for a in models_arrays]} fields each)")
+        print(f"  releases arrays found: {len(releases_arrays)} "
+              f"({[len(a) for a in releases_arrays]} releases, "
+              f"{[len(a[0].keys()) if a else 0 for a in releases_arrays]} fields each)")
 
-        arrays = json.loads(raw_json)
-        print(f"  models arrays found: {len(arrays)} "
-              f"({[len(a) for a in arrays]} models, "
-              f"{[len(a[0].keys()) if a else 0 for a in arrays]} fields each)")
-
-        # V18: main = the array whose models carry the most fields (the
-        # benchmark/pricing array). Every other array is treated as a
-        # metadata source: fields absent from main are merged in by slug
-        # (restores `name`, `releaseDate`, …).
-        models = max(arrays, key=lambda a: len(a[0].keys())) if arrays else []
-        if len(arrays) > 1:
+        models = max(models_arrays, key=lambda a: len(a[0].keys())) if models_arrays else []
+        if len(models_arrays) > 1:
             main_slugs = {m.get("slug") for m in models}
             meta_by_slug = {}
-            for arr in arrays:
+            for arr in models_arrays:
                 if arr is models:
                     continue
                 for m in arr:
@@ -130,34 +140,54 @@ def scrape_leaderboard():
                         m[k] = v
                         n_merged += 1
             print(f"  Merged metadata fields into {len(meta_by_slug)} models "
-                  f"({n_merged} field values, e.g. name/releaseDate)")
+                  f"({n_merged} field values, e.g. releaseSlug)")
+
+        # V19: join releaseSlug -> releases[slug].releaseDate
+        release_map = {}
+        for arr in releases_arrays:
+            for r in arr:
+                sl = r.get("slug")
+                rd = r.get("releaseDate")
+                if sl and rd and sl not in release_map:
+                    release_map[sl] = rd
+        print(f"  Release-date map: {len(release_map)} releases")
+        n_dated = 0
+        n_no_slug = 0
+        for m in models:
+            if m.get("releaseDate"):
+                n_dated += 1
+                continue
+            rs = m.get("releaseSlug")
+            if not rs:
+                n_no_slug += 1
+                continue
+            rd = release_map.get(rs)
+            if rd:
+                m["releaseDate"] = rd
+                n_dated += 1
+        print(f"  Models with releaseDate after join: {n_dated}/{len(models)} "
+              f"(no releaseSlug: {n_no_slug})")
+        if models and n_dated == 0:
+            sample_slugs = [m.get("releaseSlug") for m in models[:5]]
+            raise RuntimeError(
+                "No releaseDate resolved after releases join "
+                f"(models={len(models)}, releases={len(release_map)}, "
+                f"sample releaseSlugs={sample_slugs}). AA payload likely changed again."
+            )
 
         print(f"  Extracted {len(models)} models")
-
-        if models and len(models) > 0:
+        if models:
             print(f"  Fields per model: {len(models[0].keys())}")
-        if models and len(models) > 0:
-            print(f"  Fields per model: {len(models[0].keys())}")
-            
-            # Print sample (安全格式化，防止 '?' 或 '--' 导致 ValueError)
             m = models[0]
-            
-            raw_cost = m.get('intelligenceIndexCostTotal')
+            raw_cost = m.get("intelligenceIndexCostTotal")
             try:
-                # 如果是 None、空字符串或 '--'，则降级为 '?'，否则转为浮点数格式化
                 if raw_cost in (None, "", "--", "?"):
                     cost_str = "$?"
                 else:
                     cost_str = f"${float(raw_cost):.2f}"
             except (ValueError, TypeError):
                 cost_str = "$?"
-
-            print(f"  Sample: {m.get('name', '?')}, "
-                  f"reasoning={m.get('reasoningModel', '?')}, "
-                  f"intelIndex={m.get('intelligenceIndex', '?')}, "
-                  f"costTotal={cost_str}, "
-                  f"inputPrice=${m.get('price1mInputTokens', '?')}, "
-                  f"outputPrice=${m.get('price1mOutputTokens', '?')}")
+            print("  Sample: " + str(m.get("name")) + ", releaseDate=" + str(m.get("releaseDate")) + ", releaseSlug=" + str(m.get("releaseSlug")) + ", intelIndex=" + str(m.get("intelligenceIndex")))
 
         print(f"[3/3] Saving to {OUTPUT_FILE} ...")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
