@@ -439,7 +439,15 @@ def compute_scores(data):
             m["x_datestr"] = None
             n_miss += 1
     print(f"  Models with release dates: {len(valid) - n_miss}/{len(valid)}")
+    if len(valid) - n_miss == 0:
+        print("  ERROR: no models carry a valid releaseDate. The AA payload likely changed again -")
+        print("  check src/scrape.py releases join (releaseSlug -> releases[slug].releaseDate).")
+        print(f"  Sample release_date values: {[m.get("release_date") for m in valid[:5]]}")
+        print(f"  Sample slugs/releaseSlugs need raw_data.json inspection.")
+        raise SystemExit("analyze aborted: 0 models with release dates (see log above)")
     valid = [m for m in valid if m.get("x_value") is not None]
+    if not valid:
+        raise SystemExit("analyze aborted: valid list empty after x_value filter")
     for m in valid:
         m["axis_x"] = None
     ts0 = min(float(m["x_value"]) for m in valid)
