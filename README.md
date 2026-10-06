@@ -15,7 +15,7 @@
 | 5 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Fable 5.1 (xhigh with fallback) | 0.9707 | 2026-09-01 | 0.9180 | ❌ |
 | 6 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Astra (xhigh) | 0.9658 | 2026-09-03 | 0.9234 | ❌ |
 | 7 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Astra (max) | 0.9616 | 2026-09-03 | 0.9234 | ❌ |
-| 8 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 4 Argon (high) | 0.9597 | 2026-09-30 | 1.0000 | ❌ |
+| 8 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 4 Argon (high) | 0.9596 | 2026-09-30 | 1.0000 | ❌ |
 | 9 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Opus 5.5 (high with fallback) | 0.9529 | 2026-09-22 | 0.9767 | ❌ |
 | 10 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Astra (high) | 0.9430 | 2026-09-03 | 0.9234 | ❌ |
 | 11 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Opus 5 (max) | 0.9387 | 2026-07-24 | 0.8179 | ✅ |
@@ -232,9 +232,9 @@
 | 222 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude 4 Sonnet | 0.4962 | 2025-05-22 | 0.2213 | ❌ |
 | 223 | <img src="https://artificialanalysis.ai/img/logos//img/logos/spacexai.svg" width="18" alt="SpaceXAI" /> SpaceXAI | Grok 4 Fast | 0.4961 | 2025-09-19 | 0.3227 | ❌ |
 | 224 | <img src="https://artificialanalysis.ai/img/logos//img/logos/spacexai.svg" width="18" alt="SpaceXAI" /> SpaceXAI | Grok 3 mini Reasoning (high) | 0.4892 | 2025-02-19 | 0.1641 | ✅ |
-| 225 | <img src="https://artificialanalysis.ai/img/logos//img/logos/sktelecom.svg" width="18" alt="SK Telecom" /> SK Telecom | A.X-K2 | 0.4892 | 2026-08-12 | 0.8653 | ❌ |
-| 226 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 27B (non-reasoning) | 0.4878 | 2026-02-24 | 0.5226 | ❌ |
-| 227 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude 4.5 Sonnet (non-reasoning) | 0.4874 | 2025-09-29 | 0.3329 | ❌ |
+| 225 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 27B (non-reasoning) | 0.4878 | 2026-02-24 | 0.5226 | ❌ |
+| 226 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude 4.5 Sonnet (non-reasoning) | 0.4874 | 2025-09-29 | 0.3329 | ❌ |
+| 227 | <img src="https://artificialanalysis.ai/img/logos//img/logos/sktelecom.svg" width="18" alt="SK Telecom" /> SK Telecom | A.X-K2 | 0.4872 | 2026-08-12 | 0.8653 | ❌ |
 | 228 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V3.2 Speciale | 0.4866 | 2025-12-01 | 0.4039 | ❌ |
 | 229 | <img src="https://artificialanalysis.ai/img/logos//img/logos/china-mobile.png" width="18" alt="China Mobile" /> China Mobile | JT-35B-Flash | 0.4856 | 2026-05-14 | 0.6623 | ❌ |
 | 230 | <img src="https://artificialanalysis.ai/img/logos//img/logos/stepfun.svg" width="18" alt="StepFun" /> StepFun | Step 3.5 Flash | 0.4848 | 2026-02-02 | 0.4891 | ❌ |
@@ -249,7 +249,7 @@
 | 239 | <img src="https://artificialanalysis.ai/img/logos//img/logos/bytedance.svg" width="18" alt="ByteDance Seed" /> ByteDance Seed | Doubao Seed Code | 0.4689 | 2025-11-11 | 0.3799 | ❌ |
 | 240 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | o4-mini (high) | 0.4686 | 2025-04-16 | 0.1971 | ❌ |
 | 241 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | o1 | 0.4686 | 2024-12-05 | 0.1271 | ✅ |
-| 242 | <img src="https://artificialanalysis.ai/img/logos//img/logos/meta.svg" width="18" alt="Meta" /> Meta | Muse Glimmer (high) | 0.4683 | 2026-08-10 | 0.8602 | ❌ |
+| 242 | <img src="https://artificialanalysis.ai/img/logos//img/logos/meta.svg" width="18" alt="Meta" /> Meta | Muse Glimmer (high) | 0.4682 | 2026-08-10 | 0.8602 | ❌ |
 | 243 | <img src="https://artificialanalysis.ai/img/logos//img/logos/upstage.svg" width="18" alt="Upstage" /> Upstage | Solar Mini 4 | 0.4678 | 2026-09-22 | 0.9767 | ❌ |
 | 244 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.6 Luna (low) | 0.4666 | 2026-07-09 | 0.7823 | ❌ |
 | 245 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Luna (low) | 0.4651 | 2026-09-22 | 0.9767 | ❌ |
@@ -260,7 +260,7 @@
 | 250 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.5 Instant (June 2026) | 0.4527 | 2026-06-25 | 0.7505 | ❌ |
 | 251 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude 4 Sonnet (non-reasoning) | 0.4504 | 2025-05-22 | 0.2213 | ❌ |
 | 252 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Sonnet 5 (low) | 0.4489 | 2026-06-30 | 0.7617 | ❌ |
-| 253 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Medium 3.5 | 0.4480 | 2026-04-29 | 0.6333 | ❌ |
+| 253 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Medium 3.5 | 0.4480 | 2026-04-29 | 0.6333 | ❌ |
 | 254 | <img src="https://artificialanalysis.ai/img/logos//img/logos/inclusionai.jpg" width="18" alt="InclusionAI" /> InclusionAI | Ring-2.6-1T | 0.4468 | 2026-05-08 | 0.6505 | ❌ |
 | 255 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 2.5 Flash (Sep) | 0.4448 | 2025-09-25 | 0.3288 | ❌ |
 | 256 | <img src="https://artificialanalysis.ai/img/logos//img/logos/kwaikat.svg" width="18" alt="KwaiKAT" /> KwaiKAT | KAT-Coder-Pro V1 | 0.4405 | 2025-11-11 | 0.3799 | ❌ |
@@ -268,7 +268,7 @@
 | 258 | <img src="https://artificialanalysis.ai/img/logos//img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova 2.0 Pro Preview (medium) | 0.4398 | 2025-11-27 | 0.3990 | ❌ |
 | 259 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.2 (non-reasoning) | 0.4382 | 2025-12-11 | 0.4164 | ❌ |
 | 260 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude 4.5 Haiku | 0.4368 | 2025-10-15 | 0.3497 | ❌ |
-| 261 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V4.1 Flash (non-reasoning) | 0.4367 | 2026-09-10 | 0.9427 | ❌ |
+| 261 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V4.1 Flash (non-reasoning) | 0.4366 | 2026-09-10 | 0.9427 | ❌ |
 | 262 | <img src="https://artificialanalysis.ai/img/logos//img/logos/cohere.svg" width="18" alt="Cohere" /> Cohere | Command A+ | 0.4363 | 2026-05-20 | 0.6742 | ❌ |
 | 263 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.6 Terra (non-reasoning) | 0.4356 | 2026-07-09 | 0.7823 | ❌ |
 | 264 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 122B A10B (non-reasoning) | 0.4352 | 2026-02-24 | 0.5226 | ❌ |
@@ -346,9 +346,9 @@
 | 336 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V4 Pro 0813 (non-reasoning) | 0.3426 | 2026-08-13 | 0.8678 | ❌ |
 | 337 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ifm.svg" width="18" alt="Institute of Foundation Models" /> Institute of Foundation Models | K2 Horizon 3.7B | 0.3381 | 2026-09-03 | 0.9234 | ❌ |
 | 338 | <img src="https://artificialanalysis.ai/img/logos//img/logos/arcee.svg" width="18" alt="Arcee AI" /> Arcee AI | Trinity Large Thinking | 0.3371 | 2026-04-01 | 0.5823 | ❌ |
-| 339 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Magistral Medium 1.2 | 0.3363 | 2025-09-18 | 0.3217 | ❌ |
+| 339 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Magistral Medium 1.2 | 0.3363 | 2025-09-18 | 0.3217 | ❌ |
 | 340 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Max (Preview) | 0.3360 | 2025-09-05 | 0.3090 | ❌ |
-| 341 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openbmb.svg" width="18" alt="OpenBMB" /> OpenBMB | MiniCPM5-2B | 0.3314 | 2026-09-07 | 0.9344 | ❌ |
+| 341 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openbmb.svg" width="18" alt="OpenBMB" /> OpenBMB | MiniCPM5-2B | 0.3313 | 2026-09-07 | 0.9344 | ❌ |
 | 342 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V3.2 Exp (non-reasoning) | 0.3297 | 2025-09-29 | 0.3329 | ❌ |
 | 343 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Nemotron 3.5 Lightning | 0.3279 | 2026-08-11 | 0.8627 | ❌ |
 | 344 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 2.5 Flash-Lite (Sep) (non-reasoning) | 0.3273 | 2025-09-25 | 0.3288 | ❌ |
@@ -365,7 +365,7 @@
 | 355 | <img src="https://artificialanalysis.ai/img/logos//img/logos/spacexai.svg" width="18" alt="SpaceXAI" /> SpaceXAI | Grok 4.1 Fast (non-reasoning) | 0.3090 | 2025-11-19 | 0.3894 | ❌ |
 | 356 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5 mini (minimal) | 0.3082 | 2025-08-07 | 0.2823 | ❌ |
 | 357 | <img src="https://artificialanalysis.ai/img/logos//img/logos/cohere.svg" width="18" alt="Cohere" /> Cohere | North Mini Code | 0.3080 | 2026-06-09 | 0.7156 | ❌ |
-| 358 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Small 4 | 0.3075 | 2026-03-16 | 0.5550 | ❌ |
+| 358 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Small 4 | 0.3075 | 2026-03-16 | 0.5550 | ❌ |
 | 359 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemma 4 12B (non-reasoning) | 0.3069 | 2026-06-03 | 0.7029 | ❌ |
 | 360 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 VL 235B A22B | 0.3063 | 2025-09-23 | 0.3267 | ❌ |
 | 361 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | QwQ-32B | 0.3045 | 2025-03-05 | 0.1719 | ❌ |
@@ -373,7 +373,7 @@
 | 363 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openbmb.svg" width="18" alt="OpenBMB" /> OpenBMB | MiniCPM5-1B | 0.3034 | 2026-05-25 | 0.6844 | ❌ |
 | 364 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openbmb.svg" width="18" alt="OpenBMB" /> OpenBMB | MiniCPM5-1B (non-reasoning) | 0.3032 | 2026-05-25 | 0.6844 | ❌ |
 | 365 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ifm.svg" width="18" alt="Institute of Foundation Models" /> Institute of Foundation Models | K2 Think V2 | 0.3026 | 2025-12-15 | 0.4215 | ❌ |
-| 366 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Pixtral Large | 0.3021 | 2024-11-18 | 0.1198 | ❌ |
+| 366 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Pixtral Large | 0.3021 | 2024-11-18 | 0.1198 | ❌ |
 | 367 | <img src="https://artificialanalysis.ai/img/logos//img/logos/upstage.svg" width="18" alt="Upstage" /> Upstage | Solar Open 100B | 0.2987 | 2025-12-17 | 0.4241 | ❌ |
 | 368 | <img src="https://artificialanalysis.ai/img/logos//img/logos/multiversecomputing.svg" width="18" alt="Multiverse Computing" /> Multiverse Computing | HyperNova 60B 2605 (high) | 0.2959 | 2026-05-26 | 0.6864 | ❌ |
 | 369 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | o3-mini | 0.2958 | 2025-01-31 | 0.1541 | ❌ |
@@ -384,11 +384,11 @@
 | 374 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-4o (Nov) | 0.2905 | 2024-11-20 | 0.1206 | ❌ |
 | 375 | <img src="https://artificialanalysis.ai/img/logos//img/logos/china-mobile.png" width="18" alt="China Mobile" /> China Mobile | JT-MINI | 0.2905 | 2026-04-15 | 0.6073 | ❌ |
 | 376 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Next 80B A3B | 0.2903 | 2025-09-11 | 0.3148 | ❌ |
-| 377 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Medium 3 | 0.2886 | 2025-05-07 | 0.2109 | ❌ |
+| 377 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Medium 3 | 0.2886 | 2025-05-07 | 0.2109 | ❌ |
 | 378 | <img src="https://artificialanalysis.ai/img/logos//img/logos/minimax.svg" width="18" alt="MiniMax" /> MiniMax | MiniMax M1 40k | 0.2882 | 2025-06-17 | 0.2404 | ❌ |
 | 379 | <img src="https://artificialanalysis.ai/img/logos//img/logos/naver.webp" width="18" alt="Naver" /> Naver | HyperCLOVA X SEED Think (32B) | 0.2881 | 2025-12-26 | 0.4359 | ❌ |
 | 380 | <img src="https://artificialanalysis.ai/img/logos//img/logos/spacexai.svg" width="18" alt="SpaceXAI" /> SpaceXAI | Grok 4 Fast (non-reasoning) | 0.2864 | 2025-09-19 | 0.3227 | ❌ |
-| 381 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Coder Next | 0.2860 | 2026-02-03 | 0.4905 | ❌ |
+| 381 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Coder Next | 0.2859 | 2026-02-03 | 0.4905 | ❌ |
 | 382 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ifm.svg" width="18" alt="Institute of Foundation Models" /> Institute of Foundation Models | K2-V2 (high) | 0.2859 | 2025-12-05 | 0.4089 | ❌ |
 | 383 | <img src="https://artificialanalysis.ai/img/logos//img/logos/lg.png" width="18" alt="LG AI Research" /> LG AI Research | K-EXAONE (non-reasoning) | 0.2856 | 2025-12-31 | 0.4425 | ❌ |
 | 384 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.4 mini (non-reasoning) | 0.2850 | 2026-03-17 | 0.5567 | ❌ |
@@ -423,8 +423,8 @@
 | 413 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemma 4 E4B | 0.2562 | 2026-04-03 | 0.5858 | ❌ |
 | 414 | <img src="https://artificialanalysis.ai/img/logos//img/logos/korea-telecom.png" width="18" alt="Korea Telecom" /> Korea Telecom | Mi:dm K 2.5 Pro Preview | 0.2561 | 2025-12-11 | 0.4164 | ❌ |
 | 415 | <img src="https://artificialanalysis.ai/img/logos//img/logos/motif.svg" width="18" alt="Motif Technologies" /> Motif Technologies | Motif-2-12.7B | 0.2560 | 2025-12-04 | 0.4076 | ❌ |
-| 416 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Large 3 | 0.2539 | 2025-12-02 | 0.4051 | ❌ |
-| 417 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Medium 3.1 | 0.2531 | 2025-08-12 | 0.2868 | ❌ |
+| 416 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Large 3 | 0.2539 | 2025-12-02 | 0.4051 | ❌ |
+| 417 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Medium 3.1 | 0.2531 | 2025-08-12 | 0.2868 | ❌ |
 | 418 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 VL 8B | 0.2529 | 2025-10-14 | 0.3486 | ❌ |
 | 419 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | gpt-oss-20b (high) | 0.2513 | 2025-08-05 | 0.2805 | ❌ |
 | 420 | <img src="https://artificialanalysis.ai/img/logos//img/logos/stepfun.svg" width="18" alt="StepFun" /> StepFun | Step3 VL 10B | 0.2511 | 2026-01-20 | 0.4702 | ❌ |
@@ -434,18 +434,18 @@
 | 424 | <img src="https://artificialanalysis.ai/img/logos//img/logos/zai.svg" width="18" alt="Z AI" /> Z AI | GLM-4.7-Flash (non-reasoning) | 0.2486 | 2026-01-19 | 0.4688 | ❌ |
 | 425 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | gpt-oss-120b (low) | 0.2477 | 2025-08-05 | 0.2805 | ❌ |
 | 426 | <img src="https://artificialanalysis.ai/img/logos//img/logos/baidu.svg" width="18" alt="Baidu" /> Baidu | ERNIE 4.5 300B A47B | 0.2459 | 2025-06-30 | 0.2505 | ❌ |
-| 427 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Magistral Medium 1 | 0.2449 | 2025-06-10 | 0.2351 | ❌ |
-| 428 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Devstral Medium | 0.2433 | 2025-07-10 | 0.2585 | ❌ |
+| 427 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Magistral Medium 1 | 0.2449 | 2025-06-10 | 0.2351 | ❌ |
+| 428 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Devstral Medium | 0.2433 | 2025-07-10 | 0.2585 | ❌ |
 | 429 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 4B 2507 | 0.2428 | 2025-08-06 | 0.2814 | ❌ |
 | 430 | <img src="https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude 3.5 Haiku | 0.2422 | 2024-10-22 | 0.1090 | ❌ |
 | 431 | <img src="https://artificialanalysis.ai/img/logos//img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova 2.0 Omni (non-reasoning) | 0.2422 | 2025-11-26 | 0.3978 | ❌ |
 | 432 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-4 | 0.2422 | 2023-03-14 | 0.0000 | ✅ |
-| 433 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Small 4 (non-reasoning) | 0.2417 | 2026-03-16 | 0.5550 | ❌ |
+| 433 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Small 4 (non-reasoning) | 0.2417 | 2026-03-16 | 0.5550 | ❌ |
 | 434 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nousresearch.jpg" width="18" alt="Nous Research" /> Nous Research | Hermes 4 405B (non-reasoning) | 0.2406 | 2025-08-27 | 0.3005 | ❌ |
 | 435 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Coder 30B A3B | 0.2393 | 2025-07-31 | 0.2762 | ❌ |
 | 436 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 30B A3B 2507 | 0.2372 | 2025-07-30 | 0.2753 | ❌ |
 | 437 | <img src="https://artificialanalysis.ai/img/logos//img/logos/liquidai.svg" width="18" alt="Liquid AI" /> Liquid AI | LFM2.5-8B-A1B | 0.2370 | 2026-05-28 | 0.6905 | ❌ |
-| 438 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Devstral 2 | 0.2368 | 2025-12-09 | 0.4139 | ❌ |
+| 438 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Devstral 2 | 0.2368 | 2025-12-09 | 0.4139 | ❌ |
 | 439 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 VL 30B A3B | 0.2362 | 2025-10-03 | 0.3370 | ❌ |
 | 440 | <img src="https://artificialanalysis.ai/img/logos//img/logos/zai.svg" width="18" alt="Z AI" /> Z AI | GLM-4.6V (non-reasoning) | 0.2356 | 2025-12-08 | 0.4126 | ❌ |
 | 441 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Omni 30B A3B | 0.2338 | 2025-09-22 | 0.3257 | ❌ |
@@ -453,10 +453,10 @@
 | 443 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 235B | 0.2297 | 2025-04-28 | 0.2049 | ❌ |
 | 444 | <img src="https://artificialanalysis.ai/img/logos//img/logos/zai.svg" width="18" alt="Z AI" /> Z AI | GLM-4.5V | 0.2289 | 2025-08-11 | 0.2859 | ❌ |
 | 445 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | NVIDIA Nemotron Nano 12B v2 VL | 0.2282 | 2025-10-28 | 0.3640 | ❌ |
-| 446 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Large 2 (Nov) | 0.2272 | 2024-11-18 | 0.1198 | ❌ |
+| 446 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Large 2 (Nov) | 0.2272 | 2024-11-18 | 0.1198 | ❌ |
 | 447 | <img src="https://artificialanalysis.ai/img/logos//img/logos/tii.svg" width="18" alt="TII UAE" /> TII UAE | Falcon-H1R-7B | 0.2258 | 2026-01-04 | 0.4479 | ❌ |
 | 448 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Llama Nemotron Ultra | 0.2248 | 2025-04-07 | 0.1915 | ❌ |
-| 449 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Devstral Small 2 | 0.2165 | 2025-12-09 | 0.4139 | ❌ |
+| 449 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Devstral Small 2 | 0.2165 | 2025-12-09 | 0.4139 | ❌ |
 | 450 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemma 4 E2B | 0.2160 | 2026-04-02 | 0.5841 | ❌ |
 | 451 | <img src="https://artificialanalysis.ai/img/logos//img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova Pro | 0.2158 | 2024-12-03 | 0.1262 | ❌ |
 | 452 | <img src="https://artificialanalysis.ai/img/logos//img/logos/liquidai.svg" width="18" alt="Liquid AI" /> Liquid AI | LFM2.5-2.6B | 0.2152 | 2026-08-04 | 0.8450 | ❌ |
@@ -469,9 +469,9 @@
 | 459 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 2.5 Flash-Lite (non-reasoning) | 0.2086 | 2025-06-17 | 0.2404 | ❌ |
 | 460 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Llama Nemotron Super 49B v1.5 (non-reasoning) | 0.2070 | 2025-07-25 | 0.2710 | ❌ |
 | 461 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nousresearch.jpg" width="18" alt="Nous Research" /> Nous Research | Hermes 4 70B | 0.2050 | 2025-08-27 | 0.3005 | ❌ |
-| 462 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Devstral Small (May) | 0.2040 | 2025-05-21 | 0.2206 | ❌ |
+| 462 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Devstral Small (May) | 0.2040 | 2025-05-21 | 0.2206 | ❌ |
 | 463 | <img src="https://artificialanalysis.ai/img/logos//img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova Lite | 0.2033 | 2024-12-03 | 0.1262 | ❌ |
-| 464 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Magistral Small 1.2 | 0.2005 | 2025-09-17 | 0.3207 | ❌ |
+| 464 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Magistral Small 1.2 | 0.2005 | 2025-09-17 | 0.3207 | ❌ |
 | 465 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Llama 3.3 Nemotron Super 49B | 0.2003 | 2025-03-18 | 0.1794 | ❌ |
 | 466 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek R1 Distill Qwen 32B | 0.1999 | 2025-01-20 | 0.1485 | ❌ |
 | 467 | <img src="https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V3 (Dec) | 0.1997 | 2024-12-26 | 0.1365 | ❌ |
@@ -481,12 +481,12 @@
 | 471 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 VL 8B | 0.1979 | 2025-10-14 | 0.3486 | ❌ |
 | 472 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 2B | 0.1969 | 2026-03-02 | 0.5321 | ❌ |
 | 473 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 30B | 0.1964 | 2025-04-28 | 0.2049 | ❌ |
-| 474 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Magistral Small 1 | 0.1960 | 2025-06-10 | 0.2351 | ❌ |
-| 475 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Large 2 (Jul) | 0.1921 | 2024-07-24 | 0.0785 | ❌ |
+| 474 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Magistral Small 1 | 0.1960 | 2025-06-10 | 0.2351 | ❌ |
+| 475 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Large 2 (Jul) | 0.1921 | 2024-07-24 | 0.0785 | ❌ |
 | 476 | <img src="https://artificialanalysis.ai/img/logos//img/logos/upstage.svg" width="18" alt="Upstage" /> Upstage | Solar Pro 2 | 0.1913 | 2025-07-09 | 0.2577 | ❌ |
 | 477 | <img src="https://artificialanalysis.ai/img/logos//img/logos/cohere.svg" width="18" alt="Cohere" /> Cohere | Command A | 0.1912 | 2025-03-13 | 0.1765 | ❌ |
-| 478 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Devstral Small | 0.1906 | 2025-07-10 | 0.2585 | ❌ |
-| 479 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Small 3.2 | 0.1905 | 2025-06-20 | 0.2427 | ❌ |
+| 478 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Devstral Small | 0.1906 | 2025-07-10 | 0.2585 | ❌ |
+| 479 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Small 3.2 | 0.1905 | 2025-06-20 | 0.2427 | ❌ |
 | 480 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 235B (non-reasoning) | 0.1903 | 2025-04-28 | 0.2049 | ❌ |
 | 481 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Llama 3.1 Nemotron 70B | 0.1890 | 2024-10-15 | 0.1064 | ❌ |
 | 482 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 VL 4B | 0.1864 | 2025-10-14 | 0.3486 | ❌ |
@@ -499,11 +499,11 @@
 | 489 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | NVIDIA Nemotron Nano 9B V2 (non-reasoning) | 0.1799 | 2025-08-18 | 0.2922 | ❌ |
 | 490 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 32B | 0.1790 | 2025-04-28 | 0.2049 | ❌ |
 | 491 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 32B (non-reasoning) | 0.1784 | 2025-04-28 | 0.2049 | ❌ |
-| 492 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Small 3.1 | 0.1783 | 2025-03-17 | 0.1788 | ❌ |
+| 492 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Small 3.1 | 0.1783 | 2025-03-17 | 0.1788 | ❌ |
 | 493 | <img src="https://artificialanalysis.ai/img/logos//img/logos/zai.svg" width="18" alt="Z AI" /> Z AI | GLM-4.5V (non-reasoning) | 0.1780 | 2025-08-11 | 0.2859 | ❌ |
 | 494 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemma 4 E2B (non-reasoning) | 0.1779 | 2026-04-02 | 0.5841 | ❌ |
 | 495 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 14B | 0.1744 | 2025-04-28 | 0.2049 | ❌ |
-| 496 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Ministral 3 14B | 0.1730 | 2025-12-02 | 0.4051 | ❌ |
+| 496 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Ministral 3 14B | 0.1730 | 2025-12-02 | 0.4051 | ❌ |
 | 497 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ai2.svg" width="18" alt="Allen Institute for AI" /> Allen Institute for AI | Olmo 3.1 32B Instruct | 0.1725 | 2026-01-13 | 0.4603 | ❌ |
 | 498 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 Omni 30B A3B | 0.1708 | 2025-09-22 | 0.3257 | ❌ |
 | 499 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5 nano (minimal) | 0.1702 | 2025-08-07 | 0.2823 | ❌ |
@@ -527,12 +527,12 @@
 | 517 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ai21.svg" width="18" alt="AI21 Labs" /> AI21 Labs | Jamba 1.7 Large | 0.1519 | 2025-07-07 | 0.2561 | ❌ |
 | 518 | <img src="https://artificialanalysis.ai/img/logos//img/logos/sarvam.svg" width="18" alt="Sarvam" /> Sarvam | Sarvam 30B (high) | 0.1500 | 2026-03-06 | 0.5386 | ❌ |
 | 519 | <img src="https://artificialanalysis.ai/img/logos//img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-4o mini | 0.1494 | 2024-07-18 | 0.0768 | ❌ |
-| 520 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral Small 3 | 0.1486 | 2025-01-30 | 0.1536 | ❌ |
+| 520 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral Small 3 | 0.1486 | 2025-01-30 | 0.1536 | ❌ |
 | 521 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | NVIDIA Nemotron Nano 12B v2 VL (non-reasoning) | 0.1483 | 2025-10-28 | 0.3640 | ❌ |
 | 522 | <img src="https://artificialanalysis.ai/img/logos//img/logos/celeris.svg" width="18" alt="Celeris" /> Celeris | Celeris-1 | 0.1463 | 2026-07-24 | 0.8179 | ❌ |
 | 523 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ibm.svg" width="18" alt="IBM" /> IBM | Granite 4.1 8B | 0.1446 | 2026-04-29 | 0.6333 | ❌ |
 | 524 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 30B (non-reasoning) | 0.1438 | 2025-04-28 | 0.2049 | ❌ |
-| 525 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Ministral 3 8B | 0.1429 | 2025-12-02 | 0.4051 | ❌ |
+| 525 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Ministral 3 8B | 0.1429 | 2025-12-02 | 0.4051 | ❌ |
 | 526 | <img src="https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Nemotron 3 Nano (non-reasoning) | 0.1412 | 2025-12-15 | 0.4215 | ❌ |
 | 527 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ibm.svg" width="18" alt="IBM" /> IBM | Granite 4.0 H Small | 0.1380 | 2025-09-22 | 0.3257 | ❌ |
 | 528 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 VL 4B | 0.1376 | 2025-10-14 | 0.3486 | ❌ |
@@ -548,7 +548,7 @@
 | 538 | <img src="https://artificialanalysis.ai/img/logos//img/logos/meta.svg" width="18" alt="Meta" /> Meta | Llama 3.2 11B (Vision) | 0.1187 | 2024-09-25 | 0.0990 | ❌ |
 | 539 | <img src="https://artificialanalysis.ai/img/logos//img/logos/meta.svg" width="18" alt="Meta" /> Meta | Llama 3.2 3B | 0.1168 | 2024-09-25 | 0.0990 | ❌ |
 | 540 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ai2.svg" width="18" alt="Allen Institute for AI" /> Allen Institute for AI | Olmo 3 7B Think | 0.1153 | 2025-11-20 | 0.3905 | ❌ |
-| 541 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Ministral 3 3B | 0.1137 | 2025-12-02 | 0.4051 | ❌ |
+| 541 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Ministral 3 3B | 0.1137 | 2025-12-02 | 0.4051 | ❌ |
 | 542 | <img src="https://artificialanalysis.ai/img/logos//img/logos/liquidai.svg" width="18" alt="Liquid AI" /> Liquid AI | LFM2.5-1.2B-Instruct | 0.1087 | 2026-01-05 | 0.4493 | ❌ |
 | 543 | <img src="https://artificialanalysis.ai/img/logos//img/logos/reka.svg" width="18" alt="Reka AI" /> Reka AI | Reka Flash 3 | 0.1082 | 2025-03-10 | 0.1747 | ❌ |
 | 544 | <img src="https://artificialanalysis.ai/img/logos//img/logos/inclusionai.jpg" width="18" alt="InclusionAI" /> InclusionAI | Ling-mini-2.0 | 0.1078 | 2025-09-09 | 0.3129 | ❌ |
@@ -581,7 +581,7 @@
 | 571 | <img src="https://artificialanalysis.ai/img/logos//img/logos/liquidai.svg" width="18" alt="Liquid AI" /> Liquid AI | LFM2 1.2B | 0.0655 | 2025-07-10 | 0.2585 | ❌ |
 | 572 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 0.6B | 0.0649 | 2025-04-28 | 0.2049 | ❌ |
 | 573 | <img src="https://artificialanalysis.ai/img/logos//img/logos/meta.svg" width="18" alt="Meta" /> Meta | Llama 3 8B | 0.0646 | 2024-04-18 | 0.0534 | ❌ |
-| 574 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.png" width="18" alt="Mistral" /> Mistral | Mistral 7B | 0.0622 | 2023-09-27 | 0.0188 | ❌ |
+| 574 | <img src="https://artificialanalysis.ai/img/logos//img/logos/mistral.svg" width="18" alt="Mistral" /> Mistral | Mistral 7B | 0.0622 | 2023-09-27 | 0.0188 | ❌ |
 | 575 | <img src="https://artificialanalysis.ai/img/logos//img/logos/google.svg" width="18" alt="Google" /> Google | Gemma 3 4B | 0.0603 | 2025-03-12 | 0.1759 | ❌ |
 | 576 | <img src="https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3 1.7B (non-reasoning) | 0.0567 | 2025-04-28 | 0.2049 | ❌ |
 | 577 | <img src="https://artificialanalysis.ai/img/logos//img/logos/ai2.svg" width="18" alt="Allen Institute for AI" /> Allen Institute for AI | OLMo 2 7B | 0.0565 | 2024-11-26 | 0.1232 | ❌ |
