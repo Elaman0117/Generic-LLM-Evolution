@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 587,
+    "total_models": 588,
     "pareto_count": 19,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -24,9 +24,9 @@
       "left_edge_cost": 1678752000.0,
       "left_edge_label": "2023-03",
       "free_models": 0,
-      "over_max_models": 1,
+      "over_max_models": 2,
       "plotted_models": 431,
-      "total_models": 587,
+      "total_models": 588,
       "min_positive_cost": 1678752000.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1790726400.0,
@@ -54,22 +54,22 @@
       "y_axis": {
         "baseline": 0.24217434383065262,
         "baseline_model": "GPT-4",
-        "visible_models": 432,
-        "plotted_models": 432,
+        "visible_models": 433,
+        "plotted_models": 433,
         "no_x_visible": 0,
         "below_baseline": 155,
-        "total_models": 587,
+        "total_models": 588,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.24217434383065262,
       "baseline_model": "GPT-4",
-      "visible_models": 432,
-      "plotted_models": 432,
+      "visible_models": 433,
+      "plotted_models": 433,
       "no_x_visible": 0,
       "below_baseline": 155,
-      "total_models": 587,
+      "total_models": 588,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 3.04760621054014,
       "max": 57.6223698102963,
-      "count": 681
+      "count": 682
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -108,12 +108,12 @@
     "Humanity's Last Exam": {
       "min": 0.010658016682113068,
       "max": 0.6135310472659871,
-      "count": 653
+      "count": 654
     },
     "MMMU Pro": {
       "min": 0.14508670520231215,
       "max": 0.876878612716763,
-      "count": 285
+      "count": 286
     },
     "IFBench Instruction Following": {
       "min": 0.12108843537414966,
@@ -123,37 +123,37 @@
     "SciCode Coding": {
       "min": 0.06944444444444445,
       "max": 0.6689814814814815,
-      "count": 220
+      "count": 221
     },
     "CritPt Physics": {
       "min": 0.0,
       "max": 0.32285714285714284,
-      "count": 568
+      "count": 569
     },
     "AA-LCR Long Context": {
       "min": 0.0,
       "max": 0.8866666666666667,
-      "count": 564
+      "count": 565
     },
     "AA Omniscience Index": {
       "min": -88.58333333333333,
       "max": 46.416666666666664,
-      "count": 565
+      "count": 566
     },
     "AA-Omniscience Accuracy": {
       "min": 0.001,
       "max": 0.6723333333333333,
-      "count": 565
+      "count": 566
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.015260480617435538,
       "max": 0.990990990990991,
-      "count": 565
+      "count": 566
     },
     "GDPval-AA Normalized": {
       "min": 0.0,
       "max": 0.68312,
-      "count": 282
+      "count": 283
     },
     "AA Analyst Agent": {
       "min": 0.0125,
@@ -193,7 +193,7 @@
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6363636363636364,
-      "count": 209
+      "count": 210
     }
   },
   "pareto_frontier": [
@@ -225,12 +225,12 @@
       "is_reasoning": true,
       "is_pareto": true,
       "chart_label": "Fable 5.1 (max)",
-      "composite_ability": 0.9779384960543617,
+      "composite_ability": 0.9779395909525346,
       "release_date": "2026-09-01",
       "release_timestamp": 1788220800.0,
       "x_axis_position": 0.9179808137622786,
       "in_chart": true,
-      "chart_y": 0.9708884177171374,
+      "chart_y": 0.9708898625061386,
       "valid_metrics": 15
     },
     {
@@ -570,12 +570,12 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "Fable 5.1 (max)",
-        "composite_ability": 0.9779384960543617,
+        "composite_ability": 0.9779395909525346,
         "release_date": "2026-09-01",
         "release_timestamp": 1788220800.0,
         "x_axis_position": 0.9179808137622786,
         "in_chart": true,
-        "chart_y": 0.9708884177171374,
+        "chart_y": 0.9708898625061386,
         "valid_metrics": 15
       },
       {
@@ -1062,12 +1062,12 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "5.2 (max)",
-        "composite_ability": 0.7528842594504473,
+        "composite_ability": 0.7528546059582643,
         "release_date": "2026-06-16",
         "release_timestamp": 1781568000.0,
         "x_axis_position": 0.7306768046638713,
         "in_chart": true,
-        "chart_y": 0.6739147869462855,
+        "chart_y": 0.6738756572441678,
         "valid_metrics": 18
       },
       {
@@ -1464,12 +1464,12 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "2.6",
-        "composite_ability": 0.6717460461717162,
+        "composite_ability": 0.6717278939125336,
         "release_date": "2026-04-20",
         "release_timestamp": 1776643200.0,
         "x_axis_position": 0.6164378182204211,
         "in_chart": true,
-        "chart_y": 0.5668476632375579,
+        "chart_y": 0.5668237101567473,
         "valid_metrics": 19
       },
       {
@@ -1774,12 +1774,12 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "V4 Pro 0813 (max)",
-        "composite_ability": 0.7002993334969734,
+        "composite_ability": 0.7002374296387355,
         "release_date": "2026-08-13",
         "release_timestamp": 1786579200.0,
         "x_axis_position": 0.8678376816987107,
         "in_chart": true,
-        "chart_y": 0.6045255738398304,
+        "chart_y": 0.6044438876924508,
         "valid_metrics": 13
       },
       {
@@ -2102,12 +2102,12 @@
       "creator_color": "#cc785c",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
       "is_deprecated": false,
-      "composite_ability": 0.9939647851036186,
+      "composite_ability": 0.993983448140657,
       "release_date": "2026-09-22",
       "release_timestamp": 1790035200.0,
       "x_axis_position": 0.9766863274232677,
       "in_chart": true,
-      "chart_y": 0.9920361433434596,
+      "chart_y": 0.9920607704287085,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -2119,12 +2119,12 @@
       "creator_color": "#cc785c",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
       "is_deprecated": false,
-      "composite_ability": 0.9779384960543617,
+      "composite_ability": 0.9779395909525346,
       "release_date": "2026-09-01",
       "release_timestamp": 1788220800.0,
       "x_axis_position": 0.9179808137622786,
       "in_chart": true,
-      "chart_y": 0.9708884177171374,
+      "chart_y": 0.9708898625061386,
       "is_pareto": true,
       "brand_frontier_of": "Anthropic"
     },
@@ -2153,12 +2153,12 @@
       "creator_color": "#cc785c",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
       "is_deprecated": false,
-      "composite_ability": 0.9706561553210056,
+      "composite_ability": 0.9705923564466992,
       "release_date": "2026-09-01",
       "release_timestamp": 1788220800.0,
       "x_axis_position": 0.9179808137622786,
       "in_chart": true,
-      "chart_y": 0.9612788978043821,
+      "chart_y": 0.9611947110606542,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -2833,12 +2833,12 @@
       "creator_color": "#00F5E7",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/stepfun.svg",
       "is_deprecated": false,
-      "composite_ability": 0.816332988289695,
+      "composite_ability": 0.8162579095578381,
       "release_date": "2026-09-18",
       "release_timestamp": 1789689600.0,
       "x_axis_position": 0.9652291779289992,
       "in_chart": true,
-      "chart_y": 0.7576394910688246,
+      "chart_y": 0.7575404198230232,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -3292,12 +3292,12 @@
       "creator_color": "#1c7ff8",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/zai.svg",
       "is_deprecated": true,
-      "composite_ability": 0.7528842594504473,
+      "composite_ability": 0.7528546059582643,
       "release_date": "2026-06-16",
       "release_timestamp": 1781568000.0,
       "x_axis_position": 0.7306768046638713,
       "in_chart": true,
-      "chart_y": 0.6739147869462855,
+      "chart_y": 0.6738756572441678,
       "is_pareto": false,
       "brand_frontier_of": "Z AI"
     },
@@ -3326,12 +3326,12 @@
       "creator_color": "#ff7018",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg",
       "is_deprecated": false,
-      "composite_ability": 0.7479853595575596,
+      "composite_ability": 0.7479396084553342,
       "release_date": "2026-08-26",
       "release_timestamp": 1787702400.0,
       "x_axis_position": 0.9018490408489929,
       "in_chart": true,
-      "chart_y": 0.667450371479474,
+      "chart_y": 0.6673899999390637,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -3683,12 +3683,12 @@
       "creator_color": "#2243e6",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg",
       "is_deprecated": false,
-      "composite_ability": 0.7002993334969734,
+      "composite_ability": 0.7002374296387355,
       "release_date": "2026-08-13",
       "release_timestamp": 1786579200.0,
       "x_axis_position": 0.8678376816987107,
       "in_chart": true,
-      "chart_y": 0.6045255738398304,
+      "chart_y": 0.6044438876924508,
       "is_pareto": false,
       "brand_frontier_of": "DeepSeek"
     },
@@ -3887,12 +3887,12 @@
       "creator_color": "#047AFE",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/kimi.jpg",
       "is_deprecated": true,
-      "composite_ability": 0.6717460461717162,
+      "composite_ability": 0.6717278939125336,
       "release_date": "2026-04-20",
       "release_timestamp": 1776643200.0,
       "x_axis_position": 0.6164378182204211,
       "in_chart": true,
-      "chart_y": 0.5668476632375579,
+      "chart_y": 0.5668237101567473,
       "is_pareto": false,
       "brand_frontier_of": "Kimi"
     },
@@ -3965,6 +3965,23 @@
       "brand_frontier_of": "Xiaomi"
     },
     {
+      "model": "Mistral Large 4 Preview",
+      "full_name": "Mistral Large 4 Preview",
+      "creator": "Mistral",
+      "creator_slug": "mistral",
+      "creator_color": "#f32e02",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/mistral.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.664741489851617,
+      "release_date": "2026-10-06",
+      "release_timestamp": 1791244800.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.5576046978363787,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "DeepSeek V4 Flash Vision (max)",
       "full_name": "DeepSeek V4 Flash Vision (Max)",
       "creator": "DeepSeek",
@@ -3972,12 +3989,12 @@
       "creator_color": "#2243e6",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg",
       "is_deprecated": false,
-      "composite_ability": 0.6644655602690195,
+      "composite_ability": 0.664428020903091,
       "release_date": "2026-08-21",
       "release_timestamp": 1787270400.0,
       "x_axis_position": 0.8886169942258101,
       "in_chart": true,
-      "chart_y": 0.557240590893903,
+      "chart_y": 0.5571910552710023,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4142,12 +4159,12 @@
       "creator_color": "#2243e6",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg",
       "is_deprecated": true,
-      "composite_ability": 0.6425778750992658,
+      "composite_ability": 0.6425579940534945,
       "release_date": "2026-04-24",
       "release_timestamp": 1776988800.0,
       "x_axis_position": 0.6238578181339897,
       "in_chart": true,
-      "chart_y": 0.5283583737354189,
+      "chart_y": 0.528332139408817,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4312,12 +4329,12 @@
       "creator_color": "#1c7ff8",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/zai.svg",
       "is_deprecated": true,
-      "composite_ability": 0.6208728283256149,
+      "composite_ability": 0.6208515744199053,
       "release_date": "2026-04-07",
       "release_timestamp": 1775520000.0,
       "x_axis_position": 0.5929041551991148,
       "in_chart": true,
-      "chart_y": 0.4997171597609998,
+      "chart_y": 0.49968911385685744,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4448,12 +4465,12 @@
       "creator_color": "#1c7ff8",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/zai.svg",
       "is_deprecated": false,
-      "composite_ability": 0.6052075833109233,
+      "composite_ability": 0.6051574917195125,
       "release_date": "2026-08-18",
       "release_timestamp": 1787011200.0,
       "x_axis_position": 0.8807686521379318,
       "in_chart": true,
-      "chart_y": 0.4790458551051556,
+      "chart_y": 0.4789797560083475,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4465,12 +4482,12 @@
       "creator_color": "#047AFE",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/kimi.jpg",
       "is_deprecated": false,
-      "composite_ability": 0.6034293774422661,
+      "composite_ability": 0.6034078216344869,
       "release_date": "2026-06-12",
       "release_timestamp": 1781222400.0,
       "x_axis_position": 0.7220345559372778,
       "in_chart": true,
-      "chart_y": 0.4766993973754904,
+      "chart_y": 0.47667095309202795,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4907,12 +4924,12 @@
       "creator_color": "#0FD9D2",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/apodex.svg",
       "is_deprecated": false,
-      "composite_ability": 0.5739828774448053,
+      "composite_ability": 0.5739555049904824,
       "release_date": "2026-08-30",
       "release_timestamp": 1788048000.0,
       "x_axis_position": 0.9125725853191827,
       "in_chart": true,
-      "chart_y": 0.43784283484327574,
+      "chart_y": 0.43780671511824404,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -6675,12 +6692,12 @@
       "creator_color": "#2adb65",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/longcat.svg",
       "is_deprecated": false,
-      "composite_ability": 0.4202663755295102,
+      "composite_ability": 0.42024110864859676,
       "release_date": "2026-06-29",
       "release_timestamp": 1782691200.0,
       "x_axis_position": 0.7594609730504359,
       "in_chart": true,
-      "chart_y": 0.23500396199183346,
+      "chart_y": 0.23497062070718874,
       "is_pareto": false,
       "brand_frontier_of": null
     },
