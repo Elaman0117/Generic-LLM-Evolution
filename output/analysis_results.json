@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 595,
+    "total_models": 596,
     "pareto_count": 19,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -25,8 +25,8 @@
       "left_edge_label": "2023-03",
       "free_models": 0,
       "over_max_models": 0,
-      "plotted_models": 440,
-      "total_models": 595,
+      "plotted_models": 441,
+      "total_models": 596,
       "min_positive_cost": 1678752000.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1791763200.0,
@@ -50,35 +50,35 @@
         }
       ],
       "left_half_models": 173,
-      "right_half_models": 267,
+      "right_half_models": 268,
       "y_axis": {
         "baseline": 0.24253191642658445,
         "baseline_model": "GPT-4",
-        "visible_models": 440,
-        "plotted_models": 440,
+        "visible_models": 441,
+        "plotted_models": 441,
         "no_x_visible": 0,
         "below_baseline": 155,
-        "total_models": 595,
+        "total_models": 596,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.24253191642658445,
       "baseline_model": "GPT-4",
-      "visible_models": 440,
-      "plotted_models": 440,
+      "visible_models": 441,
+      "plotted_models": 441,
       "no_x_visible": 0,
       "below_baseline": 155,
-      "total_models": 595,
+      "total_models": 596,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
-      "plotted_models": 440,
+      "plotted_models": 441,
       "x_min": 0.0,
       "x_max": 1.0,
       "median": 0.574956724165729,
       "left_half_models": 173,
-      "right_half_models": 267,
+      "right_half_models": 268,
       "decile_counts": [
         3,
         17,
@@ -88,7 +88,7 @@
         62,
         50,
         48,
-        57,
+        58,
         50
       ],
       "note": "exp mapping x = (a^(b*t)-1)/(a^b-1) on normalized dates; pins (0,0)/(1,1)"
@@ -98,22 +98,22 @@
     "AA Intelligence Index": {
       "min": 3.04760621054014,
       "max": 57.6223698102963,
-      "count": 689
+      "count": 690
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
       "max": 0.9626262626262626,
-      "count": 615
+      "count": 616
     },
     "Humanity's Last Exam": {
       "min": 0.010658016682113068,
       "max": 0.6135310472659871,
-      "count": 661
+      "count": 662
     },
     "MMMU Pro": {
       "min": 0.14508670520231215,
       "max": 0.876878612716763,
-      "count": 286
+      "count": 287
     },
     "IFBench Instruction Following": {
       "min": 0.12108843537414966,
@@ -123,42 +123,42 @@
     "SciCode Coding": {
       "min": 0.06944444444444445,
       "max": 0.6689814814814815,
-      "count": 228
+      "count": 229
     },
     "CritPt Physics": {
       "min": 0.0,
       "max": 0.32857142857142857,
-      "count": 576
+      "count": 577
     },
     "AA-LCR Long Context": {
       "min": 0.0,
       "max": 0.8866666666666667,
-      "count": 572
+      "count": 573
     },
     "AA Omniscience Index": {
       "min": -88.58333333333333,
       "max": 46.416666666666664,
-      "count": 573
+      "count": 574
     },
     "AA-Omniscience Accuracy": {
       "min": 0.001,
       "max": 0.6723333333333333,
-      "count": 573
+      "count": 574
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.015260480617435538,
       "max": 0.990990990990991,
-      "count": 573
+      "count": 574
     },
     "GDPval-AA Normalized": {
       "min": 0.0,
       "max": 0.6831349999999999,
-      "count": 290
+      "count": 291
     },
     "AA Analyst Agent": {
       "min": 0.0125,
       "max": 0.6,
-      "count": 41
+      "count": 47
     },
     "APEX-Agents-AA": {
       "min": 0.007374631268436578,
@@ -178,7 +178,7 @@
     "τ³-Bench Banking": {
       "min": 0.002061855670103093,
       "max": 0.51340206185567,
-      "count": 208
+      "count": 209
     },
     "Terminal-Bench Hard": {
       "min": 0.0,
@@ -188,7 +188,7 @@
     "Terminal-Bench 2.1": {
       "min": 0.0,
       "max": 0.9138576779026217,
-      "count": 240
+      "count": 241
     },
     "Terminal-Bench 4.0": {
       "min": 0.0,
@@ -1172,12 +1172,12 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "4 Argon (high)",
-        "composite_ability": 0.9591716034651713,
+        "composite_ability": 0.9592020310827369,
         "release_date": "2026-09-30",
         "release_timestamp": 1790726400.0,
         "x_axis_position": 0.9664539696522702,
         "in_chart": true,
-        "chart_y": 0.9460988556214573,
+        "chart_y": 0.9461390257860167,
         "valid_metrics": 10
       },
       {
@@ -1190,13 +1190,13 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "3.8 Flash (high)",
-        "composite_ability": 0.8454185861108591,
+        "composite_ability": 0.8448084507086444,
         "release_date": "2026-09-02",
         "release_timestamp": 1788307200.0,
         "x_axis_position": 0.8923771088989091,
         "in_chart": true,
-        "chart_y": 0.7959235283420908,
-        "valid_metrics": 15
+        "chart_y": 0.795118035126672,
+        "valid_metrics": 16
       },
       {
         "rank": 3,
@@ -2048,13 +2048,13 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "2.6-Pro",
-        "composite_ability": 0.8195592780108842,
+        "composite_ability": 0.8055765625607878,
         "release_date": "2026-09-21",
         "release_timestamp": 1789948800.0,
         "x_axis_position": 0.9420151003732524,
         "in_chart": true,
-        "chart_y": 0.7617843894651344,
-        "valid_metrics": 10
+        "chart_y": 0.7433245813843347,
+        "valid_metrics": 11
       },
       {
         "rank": 2,
@@ -2239,12 +2239,12 @@
       "creator_color": "#34A853",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/google.svg",
       "is_deprecated": false,
-      "composite_ability": 0.9591716034651713,
+      "composite_ability": 0.9592020310827369,
       "release_date": "2026-09-30",
       "release_timestamp": 1790726400.0,
       "x_axis_position": 0.9664539696522702,
       "in_chart": true,
-      "chart_y": 0.9460988556214573,
+      "chart_y": 0.9461390257860167,
       "is_pareto": false,
       "brand_frontier_of": "Google"
     },
@@ -2256,12 +2256,12 @@
       "creator_color": "#cc785c",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
       "is_deprecated": false,
-      "composite_ability": 0.952512201786536,
+      "composite_ability": 0.9522946480589783,
       "release_date": "2026-09-22",
       "release_timestamp": 1790035200.0,
       "x_axis_position": 0.9447005854055731,
       "in_chart": true,
-      "chart_y": 0.9373071958498415,
+      "chart_y": 0.9370199841081516,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -2307,12 +2307,12 @@
       "creator_color": "#cc785c",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
       "is_deprecated": false,
-      "composite_ability": 0.9385296050701152,
+      "composite_ability": 0.9385352983873313,
       "release_date": "2026-09-01",
       "release_timestamp": 1788220800.0,
       "x_axis_position": 0.8898361432480387,
       "in_chart": true,
-      "chart_y": 0.9188475445197726,
+      "chart_y": 0.9188550607667796,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -2596,12 +2596,12 @@
       "creator_color": "#cc785c",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
       "is_deprecated": false,
-      "composite_ability": 0.8628508004248319,
+      "composite_ability": 0.8628457396984176,
       "release_date": "2026-09-01",
       "release_timestamp": 1788220800.0,
       "x_axis_position": 0.8898361432480387,
       "in_chart": true,
-      "chart_y": 0.8189373221797598,
+      "chart_y": 0.8189306410713091,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -2698,12 +2698,12 @@
       "creator_color": "#34A853",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/google.svg",
       "is_deprecated": false,
-      "composite_ability": 0.8454185861108591,
+      "composite_ability": 0.8448084507086444,
       "release_date": "2026-09-02",
       "release_timestamp": 1788307200.0,
       "x_axis_position": 0.8923771088989091,
       "in_chart": true,
-      "chart_y": 0.7959235283420908,
+      "chart_y": 0.795118035126672,
       "is_pareto": false,
       "brand_frontier_of": "Google"
     },
@@ -2827,23 +2827,6 @@
       "brand_frontier_of": "Anthropic"
     },
     {
-      "model": "MiMo-V2.6-Pro",
-      "full_name": "MiMo-V2.6-Pro",
-      "creator": "Xiaomi",
-      "creator_slug": "xiaomi",
-      "creator_color": "#ff6900",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/xiaomi.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.8195592780108842,
-      "release_date": "2026-09-21",
-      "release_timestamp": 1789948800.0,
-      "x_axis_position": 0.9420151003732524,
-      "in_chart": true,
-      "chart_y": 0.7617843894651344,
-      "is_pareto": false,
-      "brand_frontier_of": "Xiaomi"
-    },
-    {
       "model": "GPT-6.1 Sol (low)",
       "full_name": "GPT-6.1 Sol (Low)",
       "creator": "OpenAI",
@@ -2929,6 +2912,23 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Grok 4.7 (xhigh)",
+      "full_name": "Grok 4.7 (Xhigh)",
+      "creator": "SpaceXAI",
+      "creator_slug": "spacexai",
+      "creator_color": "#736cd3",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/spacexai.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.8132083380949591,
+      "release_date": "2026-09-21",
+      "release_timestamp": 1789948800.0,
+      "x_axis_position": 0.9420151003732524,
+      "in_chart": true,
+      "chart_y": 0.7533999570993982,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "GPT-5.4 (xhigh)",
       "full_name": "GPT-5.4 (Xhigh)",
       "creator": "OpenAI",
@@ -2946,21 +2946,21 @@
       "brand_frontier_of": "OpenAI"
     },
     {
-      "model": "GLM-5.3-Flash",
-      "full_name": "GLM-5.3-Flash",
-      "creator": "Z AI",
-      "creator_slug": "z-ai",
-      "creator_color": "#1c7ff8",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/zai.svg",
+      "model": "MiMo-V2.6-Pro",
+      "full_name": "MiMo-V2.6-Pro",
+      "creator": "Xiaomi",
+      "creator_slug": "xiaomi",
+      "creator_color": "#ff6900",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/xiaomi.svg",
       "is_deprecated": false,
-      "composite_ability": 0.8063979214289796,
-      "release_date": "2026-08-26",
-      "release_timestamp": 1787702400.0,
-      "x_axis_position": 0.8747370558186143,
+      "composite_ability": 0.8055765625607878,
+      "release_date": "2026-09-21",
+      "release_timestamp": 1789948800.0,
+      "x_axis_position": 0.9420151003732524,
       "in_chart": true,
-      "chart_y": 0.7444089292083604,
+      "chart_y": 0.7433245813843347,
       "is_pareto": false,
-      "brand_frontier_of": null
+      "brand_frontier_of": "Xiaomi"
     },
     {
       "model": "Gemini 3.8 Flash (medium)",
@@ -3029,23 +3029,6 @@
       "chart_y": 0.7386980545460234,
       "is_pareto": false,
       "brand_frontier_of": "Google"
-    },
-    {
-      "model": "Grok 4.7 (xhigh)",
-      "full_name": "Grok 4.7 (Xhigh)",
-      "creator": "SpaceXAI",
-      "creator_slug": "spacexai",
-      "creator_color": "#736cd3",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/spacexai.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.8004351119116997,
-      "release_date": "2026-09-21",
-      "release_timestamp": 1789948800.0,
-      "x_axis_position": 0.9420151003732524,
-      "in_chart": true,
-      "chart_y": 0.7365369017967897,
-      "is_pareto": false,
-      "brand_frontier_of": null
     },
     {
       "model": "Claude Sonnet 5.5 (high with fallback)",
@@ -3184,6 +3167,40 @@
       "brand_frontier_of": "OpenAI"
     },
     {
+      "model": "GLM-5.3-Flash",
+      "full_name": "GLM-5.3-Flash",
+      "creator": "Z AI",
+      "creator_slug": "z-ai",
+      "creator_color": "#1c7ff8",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/zai.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.7813006514246946,
+      "release_date": "2026-08-26",
+      "release_timestamp": 1787702400.0,
+      "x_axis_position": 0.8747370558186143,
+      "in_chart": true,
+      "chart_y": 0.711275823604905,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Claude Haiku 5.5 (max)",
+      "full_name": "Claude Haiku 5.5 (Max)",
+      "creator": "Anthropic",
+      "creator_slug": "anthropic",
+      "creator_color": "#cc785c",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.7780705600892533,
+      "release_date": "2026-10-07",
+      "release_timestamp": 1791331200.0,
+      "x_axis_position": 0.9858870562503259,
+      "in_chart": true,
+      "chart_y": 0.7070114969547272,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "Claude Opus 5 (low)",
       "full_name": "Claude Opus 5 (Low)",
       "creator": "Anthropic",
@@ -3316,23 +3333,6 @@
       "x_axis_position": 0.7625552879713853,
       "in_chart": true,
       "chart_y": 0.6807001676826201,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
-      "model": "Claude Haiku 5.5 (max)",
-      "full_name": "Claude Haiku 5.5 (Max)",
-      "creator": "Anthropic",
-      "creator_slug": "anthropic",
-      "creator_color": "#cc785c",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/anthropic.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.7578442631285112,
-      "release_date": "2026-10-07",
-      "release_timestamp": 1791331200.0,
-      "x_axis_position": 0.9858870562503259,
-      "in_chart": true,
-      "chart_y": 0.6803089897476604,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -3592,6 +3592,23 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Agnes 2.5 Pro Beta",
+      "full_name": "Agnes 2.5 Pro Beta",
+      "creator": "Sapiens AI",
+      "creator_slug": "sapiens-ai",
+      "creator_color": "#1521a9",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/sapiens.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.7210572241266632,
+      "release_date": "2026-08-26",
+      "release_timestamp": 1787702400.0,
+      "x_axis_position": 0.8747370558186143,
+      "in_chart": true,
+      "chart_y": 0.6317431956242932,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "GPT-5.2 (xhigh)",
       "full_name": "GPT-5.2 (Xhigh)",
       "creator": "OpenAI",
@@ -3813,6 +3830,23 @@
       "brand_frontier_of": null
     },
     {
+      "model": "GPT-6 Luna (max)",
+      "full_name": "GPT-6 Luna (Max)",
+      "creator": "OpenAI",
+      "creator_slug": "openai",
+      "creator_color": "#1f1f1f",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/openai.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.6879494095167659,
+      "release_date": "2026-09-22",
+      "release_timestamp": 1790035200.0,
+      "x_axis_position": 0.9447005854055731,
+      "in_chart": true,
+      "chart_y": 0.5880346680600577,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "DeepSeek V4.1 Flash (max)",
       "full_name": "DeepSeek V4.1 Flash (Max)",
       "creator": "DeepSeek",
@@ -3820,12 +3854,12 @@
       "creator_color": "#2243e6",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/deepseek.svg",
       "is_deprecated": false,
-      "composite_ability": 0.6929821290205544,
+      "composite_ability": 0.6873796421729116,
       "release_date": "2026-09-10",
       "release_timestamp": 1788998400.0,
       "x_axis_position": 0.9129598347364294,
       "in_chart": true,
-      "chart_y": 0.5946788021337289,
+      "chart_y": 0.5872824682562503,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -3915,23 +3949,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "GPT-6 Luna (max)",
-      "full_name": "GPT-6 Luna (Max)",
-      "creator": "OpenAI",
-      "creator_slug": "openai",
-      "creator_color": "#1f1f1f",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/openai.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.6790078273506678,
-      "release_date": "2026-09-22",
-      "release_timestamp": 1790035200.0,
-      "x_axis_position": 0.9447005854055731,
-      "in_chart": true,
-      "chart_y": 0.5762301018215497,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Motif 3",
       "full_name": "Motif 3",
       "creator": "Motif Technologies",
@@ -3945,6 +3962,23 @@
       "x_axis_position": 0.8404651967867268,
       "in_chart": true,
       "chart_y": 0.5742030883933468,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Qwen3.8 27B (xhigh)",
+      "full_name": "Qwen3.8 27B (Xhigh)",
+      "creator": "Alibaba",
+      "creator_slug": "alibaba",
+      "creator_color": "#ff7018",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.674167121601687,
+      "release_date": "2026-08-14",
+      "release_timestamp": 1786665600.0,
+      "x_axis_position": 0.845280302893965,
+      "in_chart": true,
+      "chart_y": 0.569839461933273,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4151,23 +4185,6 @@
       "chart_y": 0.546177726409083,
       "is_pareto": false,
       "brand_frontier_of": "DeepSeek"
-    },
-    {
-      "model": "Qwen3.8 27B (xhigh)",
-      "full_name": "Qwen3.8 27B (Xhigh)",
-      "creator": "Alibaba",
-      "creator_slug": "alibaba",
-      "creator_color": "#ff7018",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/alibaba.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.6499292564059932,
-      "release_date": "2026-08-14",
-      "release_timestamp": 1786665600.0,
-      "x_axis_position": 0.845280302893965,
-      "in_chart": true,
-      "chart_y": 0.5378409319340289,
-      "is_pareto": false,
-      "brand_frontier_of": null
     },
     {
       "model": "GPT-5 Codex (high)",
@@ -4568,12 +4585,12 @@
       "creator_color": "#1521a9",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/ifm.svg",
       "is_deprecated": false,
-      "composite_ability": 0.6062478159601764,
+      "composite_ability": 0.6062920973163011,
       "release_date": "2026-09-03",
       "release_timestamp": 1788393600.0,
       "x_axis_position": 0.8949251122294177,
       "in_chart": true,
-      "chart_y": 0.4801732342539549,
+      "chart_y": 0.48023169395289794,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4585,12 +4602,12 @@
       "creator_color": "#1c7ff8",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/zai.svg",
       "is_deprecated": false,
-      "composite_ability": 0.6049644830142111,
+      "composite_ability": 0.6049488580214072,
       "release_date": "2026-08-18",
       "release_timestamp": 1787011200.0,
       "x_axis_position": 0.8549907921022707,
       "in_chart": true,
-      "chart_y": 0.4784789939634452,
+      "chart_y": 0.4784583660411039,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -5469,12 +5486,12 @@
       "creator_color": "#76b900",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg",
       "is_deprecated": false,
-      "composite_ability": 0.5459772125387086,
+      "composite_ability": 0.5459641513992131,
       "release_date": "2026-06-04",
       "release_timestamp": 1780531200.0,
       "x_axis_position": 0.689651503417864,
       "in_chart": true,
-      "chart_y": 0.40060472869113767,
+      "chart_y": 0.40058748553623946,
       "is_pareto": false,
       "brand_frontier_of": null
     },
