@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 596,
+    "total_models": 599,
     "pareto_count": 19,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -24,9 +24,9 @@
       "left_edge_cost": 1678752000.0,
       "left_edge_label": "2023-03",
       "free_models": 0,
-      "over_max_models": 0,
+      "over_max_models": 3,
       "plotted_models": 441,
-      "total_models": 596,
+      "total_models": 599,
       "min_positive_cost": 1678752000.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1791763200.0,
@@ -54,22 +54,22 @@
       "y_axis": {
         "baseline": 0.24253191642658445,
         "baseline_model": "GPT-4",
-        "visible_models": 441,
-        "plotted_models": 441,
+        "visible_models": 444,
+        "plotted_models": 444,
         "no_x_visible": 0,
         "below_baseline": 155,
-        "total_models": 596,
+        "total_models": 599,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.24253191642658445,
       "baseline_model": "GPT-4",
-      "visible_models": 441,
-      "plotted_models": 441,
+      "visible_models": 444,
+      "plotted_models": 444,
       "no_x_visible": 0,
       "below_baseline": 155,
-      "total_models": 596,
+      "total_models": 599,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
@@ -98,22 +98,22 @@
     "AA Intelligence Index": {
       "min": 3.04760621054014,
       "max": 57.6223698102963,
-      "count": 690
+      "count": 693
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
       "max": 0.9626262626262626,
-      "count": 616
+      "count": 617
     },
     "Humanity's Last Exam": {
       "min": 0.010658016682113068,
       "max": 0.6135310472659871,
-      "count": 662
+      "count": 665
     },
     "MMMU Pro": {
       "min": 0.14508670520231215,
       "max": 0.876878612716763,
-      "count": 287
+      "count": 288
     },
     "IFBench Instruction Following": {
       "min": 0.12108843537414966,
@@ -123,37 +123,37 @@
     "SciCode Coding": {
       "min": 0.06944444444444445,
       "max": 0.6689814814814815,
-      "count": 229
+      "count": 232
     },
     "CritPt Physics": {
       "min": 0.0,
       "max": 0.32857142857142857,
-      "count": 577
+      "count": 580
     },
     "AA-LCR Long Context": {
       "min": 0.0,
       "max": 0.8866666666666667,
-      "count": 573
+      "count": 576
     },
     "AA Omniscience Index": {
       "min": -88.58333333333333,
       "max": 46.416666666666664,
-      "count": 574
+      "count": 577
     },
     "AA-Omniscience Accuracy": {
       "min": 0.001,
       "max": 0.6723333333333333,
-      "count": 574
+      "count": 577
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.015260480617435538,
       "max": 0.990990990990991,
-      "count": 574
+      "count": 577
     },
     "GDPval-AA Normalized": {
       "min": 0.0,
       "max": 0.6831349999999999,
-      "count": 292
+      "count": 295
     },
     "AA Analyst Agent": {
       "min": 0.0125,
@@ -188,12 +188,12 @@
     "Terminal-Bench 2.1": {
       "min": 0.0,
       "max": 0.9138576779026217,
-      "count": 241
+      "count": 242
     },
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6363636363636364,
-      "count": 218
+      "count": 221
     }
   },
   "pareto_frontier": [
@@ -3269,6 +3269,23 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Muse Spark Open (xhigh)",
+      "full_name": "Muse Spark Open (Xhigh)",
+      "creator": "Meta",
+      "creator_slug": "meta",
+      "creator_color": "#0089f4",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/meta.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.7691534229909678,
+      "release_date": "2026-10-15",
+      "release_timestamp": 1792022400.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.6952392027925517,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "Muse Spark 1.2 (xhigh)",
       "full_name": "Muse Spark 1.2 (Xhigh)",
       "creator": "Meta",
@@ -5292,6 +5309,23 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Solar Pro 4",
+      "full_name": "Solar Pro 4",
+      "creator": "Upstage",
+      "creator_slug": "upstage",
+      "creator_color": "#7c59f5",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/upstage.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.5565369570236505,
+      "release_date": "2026-08-06",
+      "release_timestamp": 1785974400.0,
+      "x_axis_position": 0.826178666772263,
+      "in_chart": true,
+      "chart_y": 0.4145455728190189,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "GPT-5.1 Codex mini (high)",
       "full_name": "GPT-5.1 Codex mini (High)",
       "creator": "OpenAI",
@@ -5339,23 +5373,6 @@
       "x_axis_position": 0.6092266714379719,
       "in_chart": true,
       "chart_y": 0.4134865279630982,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
-      "model": "Solar Pro 4",
-      "full_name": "Solar Pro 4",
-      "creator": "Upstage",
-      "creator_slug": "upstage",
-      "creator_color": "#7c59f5",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/upstage.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.5531075754660055,
-      "release_date": "2026-08-06",
-      "release_timestamp": 1785974400.0,
-      "x_axis_position": 0.826178666772263,
-      "in_chart": true,
-      "chart_y": 0.41001814568114325,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -5849,6 +5866,23 @@
       "x_axis_position": 0.4218434601812711,
       "in_chart": true,
       "chart_y": 0.35862833233711244,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Nemotron 3.5 Super VL",
+      "full_name": "Nemotron 3.5 Super VL",
+      "creator": "NVIDIA",
+      "creator_slug": "nvidia",
+      "creator_color": "#76b900",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.5139912569323863,
+      "release_date": "2026-10-15",
+      "release_timestamp": 1792022400.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.3583772655148333,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -7060,6 +7094,23 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Nemotron 3.5 Bolt 74B-A9B",
+      "full_name": "Nemotron 3.5 Bolt 74B-A9B",
+      "creator": "NVIDIA",
+      "creator_slug": "nvidia",
+      "creator_color": "#76b900",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.4094129548495056,
+      "release_date": "2026-10-15",
+      "release_timestamp": 1792022400.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.22031428391760963,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "Nova 2.0 Omni (low)",
       "full_name": "Nova 2.0 Omni (Low)",
       "creator": "Amazon",
@@ -7763,7 +7814,7 @@
       "creator_slug": "nvidia",
       "creator_color": "#76b900",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos//img/logos/nvidia.svg",
-      "is_deprecated": false,
+      "is_deprecated": true,
       "composite_ability": 0.3541258953606397,
       "release_date": "2026-03-11",
       "release_timestamp": 1773187200.0,
