@@ -17,7 +17,7 @@
         "a": 2.9292409166825575,
         "b": 3.3385934680364344,
         "c": 0.0,
-        "mse_vs_quantile": 0.002347399637568371,
+        "mse_vs_quantile": 0.0023473996375683714,
         "max_abs_deviation_vs_quantile": 0.0935898657190465,
         "uniform_density": false
       },
