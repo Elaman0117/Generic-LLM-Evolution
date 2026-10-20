@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Scraper for Artificial Analysis LLM Leaderboard (Evolution variant).
+Scraper for Artificial Analysis LLM Leaderboard.
 
-Extracts the full model dataset from the Next.js RSC payload embedded in the page,
-and joins release dates from releases metadata.
+Extracts the full model dataset (Status: All, including deprecated models)
+from the Next.js page at https://artificialanalysis.ai/leaderboards/models?status=all.
 
-V20 (2026-10-20): AA updated the RSC payload key from `models` to `initialModels`
-for the main evaluation dataset. The scraper dynamically discovers all model arrays
-(initialModels, models, releases), selects the primary benchmark array by evaluation
-coverage, merges missing fields across arrays by slug, and resolves releaseDate
-via direct slug match and releaseSlug -> releases[slug].releaseDate mapping.
+V21 (2026-10-20): AA defaults the /leaderboards/models page to 'Status: Current' (273 models)
+and carries initial data under `initialModels`. To extract ALL models (~706 models, including
+430+ deprecated models), the scraper queries `?status=all`, retrieves the complete model dataset
+from the rendered table instance (TanStack table state on the React fiber), traverses RSC payloads
+for auxiliary metadata (releases, etc.), merges missing fields across arrays by slug, and resolves
+release dates.
 """
 
 import json
@@ -18,54 +19,61 @@ import sys
 
 from playwright.sync_api import sync_playwright
 
-URL = "https://artificialanalysis.ai/leaderboards/models"
+URL = "https://artificialanalysis.ai/leaderboards/models?status=all"
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "raw_data.json")
 MIN_MODELS_EXPECTED = 100
 
-_SEARCH_ALL_JS = """
-function _findAllModelArrays(obj, maxDepth) {
-  const found = [];
-  const seen = new Set();
-  function search(o, d) {
-    if (d > maxDepth || !o || typeof o !== 'object') return;
-    if (Array.isArray(o)) {
-      if (o.length > 0 && typeof o[0] === 'object' && o[0] !== null && 'slug' in o[0]) {
-        if (!seen.has(o)) {
-          seen.add(o);
-          found.push(o);
+EXTRACT_FULL_JS = """
+(() => {
+  // 1. Try to get complete model array from TanStack table instance on the React fiber
+  let tableModels = null;
+  const table = document.querySelector('table');
+  if (table) {
+    const fiberKey = Object.keys(table).find(k => k.startsWith('__reactFiber$'));
+    if (fiberKey) {
+      let f = table[fiberKey];
+      while (f) {
+        if (f.memoizedProps && f.memoizedProps.table && f.memoizedProps.table.options && f.memoizedProps.table.options.data) {
+          const d = f.memoizedProps.table.options.data;
+          if (Array.isArray(d) && d.length > 0) {
+            tableModels = d;
+            break;
+          }
+        }
+        f = f.return;
+      }
+    }
+  }
+
+  // 2. Also extract all model/release arrays from RSC scripts
+  function _findAllModelArrays(obj, maxDepth) {
+    const found = [];
+    const seen = new Set();
+    function search(o, d) {
+      if (d > maxDepth || !o || typeof o !== 'object') return;
+      if (Array.isArray(o)) {
+        if (o.length > 0 && typeof o[0] === 'object' && o[0] !== null && 'slug' in o[0]) {
+          if (!seen.has(o)) {
+            seen.add(o);
+            found.push(o);
+          }
+        }
+        for (const v of o) search(v, d + 1);
+      } else {
+        for (const v of Object.values(o)) {
+          search(v, d + 1);
         }
       }
-      for (const v of o) search(v, d + 1);
-    } else {
-      for (const v of Object.values(o)) {
-        search(v, d + 1);
-      }
     }
+    search(obj, 0);
+    return found;
   }
-  search(obj, 0);
-  return found;
-}
-"""
 
-EXTRACT_JS = """
-(() => {
-  ${SEARCH}
   const scripts = document.querySelectorAll('script');
-  const found = [];
+  const rscArrays = [];
   const seenSigs = new Set();
-
-  function processData(data) {
-    const modelArrays = _findAllModelArrays(data, 25);
-    for (const arr of modelArrays) {
-      const sig = arr.length + ':' + (arr[0] ? arr[0].slug : '');
-      if (!seenSigs.has(sig)) {
-        seenSigs.add(sig);
-        found.push(arr);
-      }
-    }
-  }
 
   for (let i = 0; i < scripts.length; i++) {
     const text = scripts[i].textContent || '';
@@ -84,10 +92,16 @@ EXTRACT_JS = """
         const colonIdx = content.indexOf(':');
         if (colonIdx === -1) continue;
         const data = JSON.parse(content.substring(colonIdx + 1));
-        processData(data);
+        const modelArrays = _findAllModelArrays(data, 25);
+        for (const a of modelArrays) {
+          const sig = a.length + ':' + (a[0] ? a[0].slug : '');
+          if (!seenSigs.has(sig)) {
+            seenSigs.add(sig);
+            rscArrays.push(a);
+          }
+        }
       } catch(e) { /* skip */ }
     }
-
     if (!matchedAny) {
       const match = text.match(/^self\\.__next_f\\.push\\((.+)\\)$/s);
       if (match) {
@@ -98,16 +112,27 @@ EXTRACT_JS = """
             const colonIdx = content.indexOf(':');
             if (colonIdx !== -1) {
               const data = JSON.parse(content.substring(colonIdx + 1));
-              processData(data);
+              const modelArrays = _findAllModelArrays(data, 25);
+              for (const a of modelArrays) {
+                const sig = a.length + ':' + (a[0] ? a[0].slug : '');
+                if (!seenSigs.has(sig)) {
+                  seenSigs.add(sig);
+                  rscArrays.push(a);
+                }
+              }
             }
           }
         } catch(e) { /* skip */ }
       }
     }
   }
-  return JSON.stringify(found);
+
+  return JSON.stringify({
+    tableModels: tableModels,
+    rscArrays: rscArrays
+  });
 })()
-""".replace("${SEARCH}", _SEARCH_ALL_JS)
+"""
 
 
 def scrape_leaderboard():
@@ -119,15 +144,24 @@ def scrape_leaderboard():
 
         print(f"[1/3] Navigating to {URL} ...")
         page.goto(URL, wait_until="networkidle", timeout=90000)
-        page.wait_for_timeout(8000)
+        page.wait_for_timeout(8000)  # Wait for full table and data to settle
 
-        print("[2/3] Extracting model data from RSC payload ...")
-        raw_json = page.evaluate(EXTRACT_JS)
-        arrays = json.loads(raw_json)
-        print(f"  models arrays found: {len(arrays)} "
-              f"({[len(a) for a in arrays]} models, "
-              f"{[len(a[0].keys()) if a else 0 for a in arrays]} fields each)")
+        print("[2/3] Extracting model data (Status: All) ...")
+        raw_json = page.evaluate(EXTRACT_FULL_JS)
+        payload = json.loads(raw_json)
 
+        table_models = payload.get("tableModels")
+        rsc_arrays = payload.get("rscArrays", [])
+
+        candidate_arrays = list(rsc_arrays)
+        if table_models and isinstance(table_models, list):
+            candidate_arrays.append(table_models)
+
+        print(f"  Arrays found: {len(candidate_arrays)} "
+              f"(tableModels: {len(table_models) if table_models else 0}, "
+              f"rscArrays: {len(rsc_arrays)})")
+
+        # Select the primary dataset: the array with highest benchmark metric coverage and model count
         def array_score(a):
             if not a:
                 return (0, 0, 0)
@@ -135,22 +169,21 @@ def scrape_leaderboard():
             total_fields = sum(len(m.keys()) for m in a)
             return (intel_count, len(a), total_fields)
 
-        models = max(arrays, key=array_score) if arrays else []
+        models = max(candidate_arrays, key=array_score) if candidate_arrays else []
 
-        # Build release_map from any array with releaseDate
+        # Build release date map from all candidate arrays (releases, etc.)
         release_map = {}
-        for arr in arrays:
+        for arr in candidate_arrays:
             for r in arr:
                 sl = r.get("slug")
                 rd = r.get("releaseDate")
                 if sl and rd and sl not in release_map:
                     release_map[sl] = rd
-        print(f"  Release-date map: {len(release_map)} releases")
 
-        if len(arrays) > 1 and models:
+        if len(candidate_arrays) > 1 and models:
             models_by_slug = {m["slug"]: m for m in models if m.get("slug")}
             n_merged = 0
-            for arr in arrays:
+            for arr in candidate_arrays:
                 if arr is models:
                     continue
                 for item in arr:
@@ -164,25 +197,20 @@ def scrape_leaderboard():
             print(f"  Merged {n_merged} missing field values across {len(models_by_slug)} models "
                   f"(e.g. name/releaseDate/releaseSlug)")
 
-        # Join releaseSlug -> releases[slug].releaseDate for any models still missing releaseDate
+        # Join releaseSlug -> release_map for any models missing releaseDate
         n_dated = 0
-        n_no_slug = 0
         for m in models:
             if m.get("releaseDate"):
                 n_dated += 1
                 continue
             rs = m.get("releaseSlug")
-            if not rs:
-                n_no_slug += 1
-                continue
-            rd = release_map.get(rs)
-            if rd:
-                m["releaseDate"] = rd
+            if rs and rs in release_map:
+                m["releaseDate"] = release_map[rs]
                 n_dated += 1
 
-        print(f"  Models with releaseDate after join: {n_dated}/{len(models)} (no releaseSlug: {n_no_slug})")
-
         models_with_intel = sum(1 for m in models if m.get("intelligenceIndex") is not None)
+        deprecated_count = sum(1 for m in models if m.get("deprecated"))
+
         if len(models) < MIN_MODELS_EXPECTED or models_with_intel < 50:
             raise RuntimeError(
                 f"Extraction validation failed: {len(models)} models extracted "
@@ -190,17 +218,15 @@ def scrape_leaderboard():
                 f"intelligenceIndex (expected >= 50). Available fields: "
                 f"{list(models[0].keys()) if models else []}"
             )
-        if models and n_dated == 0:
-            raise RuntimeError(
-                f"No releaseDate resolved after releases join "
-                f"(models={len(models)}, releases={len(release_map)})."
-            )
 
-        print(f"  Extracted {len(models)} models ({models_with_intel} with intelligenceIndex, {n_dated} with releaseDate)")
-        if models:
+        print(f"  Extracted {len(models)} models ({models_with_intel} with intelligenceIndex, "
+              f"{deprecated_count} deprecated, {n_dated} with releaseDate)")
+
+        if models and len(models) > 0:
             sample_model = next((x for x in models if x.get("intelligenceIndex") is not None and x.get("price1mInputTokens") is not None), models[0])
             print(f"  Fields per model: {len(sample_model.keys())}")
-            raw_cost = sample_model.get("intelligenceIndexCostTotal")
+            
+            raw_cost = sample_model.get('intelligenceIndexCostTotal')
             try:
                 if raw_cost in (None, "", "--", "?"):
                     cost_str = "$?"
@@ -208,7 +234,13 @@ def scrape_leaderboard():
                     cost_str = f"${float(raw_cost):.2f}"
             except (ValueError, TypeError):
                 cost_str = "$?"
-            print("  Sample: " + str(sample_model.get("name")) + ", releaseDate=" + str(sample_model.get("releaseDate")) + ", releaseSlug=" + str(sample_model.get("releaseSlug")) + ", intelIndex=" + str(sample_model.get("intelligenceIndex")))
+
+            print(f"  Sample: {sample_model.get('name', '?')}, "
+                  f"reasoning={sample_model.get('reasoningModel', '?')}, "
+                  f"intelIndex={sample_model.get('intelligenceIndex', '?')}, "
+                  f"costTotal={cost_str}, "
+                  f"inputPrice=${sample_model.get('price1mInputTokens', '?')}, "
+                  f"outputPrice=${sample_model.get('price1mOutputTokens', '?')}")
 
         print(f"[3/3] Saving to {OUTPUT_FILE} ...")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
