@@ -17,7 +17,7 @@
         "a": 55.24639801281282,
         "b": 0.9300493415798492,
         "c": 0.0,
-        "mse_vs_quantile": 0.0022152408840544514,
+        "mse_vs_quantile": 0.002215240884054452,
         "max_abs_deviation_vs_quantile": 0.09401351806463998,
         "uniform_density": false
       },
@@ -158,7 +158,7 @@
     "AA Analyst Agent": {
       "min": 0.0125,
       "max": 0.6,
-      "count": 50
+      "count": 51
     },
     "APEX-Agents-AA": {
       "min": 0.007374631268436578,
@@ -1354,13 +1354,13 @@
         "is_reasoning": true,
         "is_pareto": true,
         "chart_label": "3.1 Pro",
-        "composite_ability": 0.9542893827099286,
+        "composite_ability": 0.9326675578575139,
         "release_date": "2026-10-23",
         "release_timestamp": 1792713600.0,
         "x_axis_position": 1.0,
         "in_chart": true,
-        "chart_y": 0.939570628409274,
-        "valid_metrics": 11
+        "chart_y": 0.910986606448145,
+        "valid_metrics": 12
       },
       {
         "rank": 2,
@@ -2068,23 +2068,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "Kimi K3.1 Pro",
-      "full_name": "Kimi K3.1 Pro",
-      "creator": "Kimi",
-      "creator_slug": "kimi",
-      "creator_color": "#047AFE",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/kimi.jpg",
-      "is_deprecated": false,
-      "composite_ability": 0.9542893827099286,
-      "release_date": "2026-10-23",
-      "release_timestamp": 1792713600.0,
-      "x_axis_position": 1.0,
-      "in_chart": true,
-      "chart_y": 0.939570628409274,
-      "is_pareto": false,
-      "brand_frontier_of": "Kimi"
-    },
-    {
       "model": "Claude Opus 5.5 (high with fallback)",
       "full_name": "Claude Opus 5.5 (High, Default Fallback)",
       "creator": "Anthropic",
@@ -2185,6 +2168,23 @@
       "chart_y": 0.9156488788682765,
       "is_pareto": false,
       "brand_frontier_of": null
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "full_name": "Kimi K3.1 Pro",
+      "creator": "Kimi",
+      "creator_slug": "kimi",
+      "creator_color": "#047AFE",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/kimi.jpg",
+      "is_deprecated": false,
+      "composite_ability": 0.9326675578575139,
+      "release_date": "2026-10-23",
+      "release_timestamp": 1792713600.0,
+      "x_axis_position": 1.0,
+      "in_chart": true,
+      "chart_y": 0.910986606448145,
+      "is_pareto": false,
+      "brand_frontier_of": "Kimi"
     },
     {
       "model": "GPT-6.1 Sol (xhigh)",

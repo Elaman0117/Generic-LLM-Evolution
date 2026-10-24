@@ -828,6 +828,18 @@
   "kind": "online"
  },
  {
+  "text": "3.1 Pro",
+  "fs": 7.0,
+  "brand": "Kimi",
+  "full_name": "Kimi K3.1 Pro",
+  "cx": 1244.776422045757,
+  "cy": 1134.3665533693552,
+  "w": 35.0,
+  "h": 12.152777777777828,
+  "angle": 25.599867063155003,
+  "kind": "online"
+ },
+ {
   "text": "Opus 5 (max)",
   "fs": 7.0,
   "brand": "Anthropic",
@@ -852,18 +864,6 @@
   "kind": "offset"
  },
  {
-  "text": "3.1 Pro",
-  "fs": 7.0,
-  "brand": "Kimi",
-  "full_name": "Kimi K3.1 Pro",
-  "cx": 1245.7400723043506,
-  "cy": 1163.467409813927,
-  "w": 35.0,
-  "h": 12.152777777777828,
-  "angle": 30.682269553281504,
-  "kind": "online"
- },
- {
   "text": "GPT-6 Astra (xhigh)",
   "fs": 7.0,
   "brand": "OpenAI",
@@ -880,12 +880,12 @@
   "fs": 6.1,
   "brand": "Meta",
   "full_name": "Muse Wonder Full (Max)",
-  "cx": 1266.2828461703125,
-  "cy": 1246.6867615442895,
+  "cx": 1216.1291634590643,
+  "cy": 1151.3306270273342,
   "w": 88.0,
   "h": 10.590277777777715,
   "angle": 52.18873299704779,
-  "kind": "extend"
+  "kind": "offset"
  },
  {
   "text": "Fable 5.1 (max)",
