@@ -182,6 +182,13 @@ BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 RAW_DATA_FILE = os.path.join(OUTPUT_DIR, "raw_data.json")
 
+# V20 (experimental, default OFF): iterative leave-one-out normalization.
+# Enabled with `python src/analyze.py --iterative`. All outputs go to
+# output_iter/ + README_ITER.md so the standard results are never touched.
+ITERATIVE_NORM = "--iterative" in sys.argv
+if ITERATIVE_NORM:
+    OUTPUT_DIR = os.path.join(BASE_DIR, "output_iter")
+
 # 内嵌字体（repo/fonts/，scripts/build_fonts.py 生成的 Sarasa Mono SC 子集）：
 # 最先注册 → 任何机器（含 GitHub Actions runner）都用同一份字体文件，
 # 渲染与本地完全一致。V17 之前 runner 上没有列表中排在 Noto Serif SC 之前
@@ -280,8 +287,8 @@ METRIC_FIELDS = {
     "tau2": "tau2",
     "tauBanking": "tauBanking",
     "terminalbenchHard": "terminalbenchHard",
-    "terminalbenchV21": "terminalbenchV21",
-    "terminalbenchV40": "terminalbenchV40",
+    "terminalbenchV21": "terminalBench21",  # AA payload uses capital-B, no V (V19 fix 2026-10-01)
+    "terminalbenchV40": "terminalBench40",
 }
 
 METRIC_LABELS = {
@@ -317,6 +324,104 @@ MIN_VALID_METRICS = 5
 def load_data():
     with open(RAW_DATA_FILE, encoding="utf-8") as f:
         return json.load(f)
+
+
+def _iterative_normalize(models, metric_ranges, tol=1e-9, max_rounds=200):
+    """V20 experimental: iterative leave-one-out column rescaling.
+
+    Round 0 = standard per-column min-max (N0). Each round (Jacobi: all
+    columns updated in parallel from the same snapshot, results stored
+    in a new matrix): for every model/column, take the mean over the
+    OTHER columns, globally normalize those means to [0,1], then use
+    the min/max over each column\'s participants as that column\'s new
+    bounds: N_new = lo + (hi-lo) * N0. Anchoring to N0 (not to the
+    previous round) avoids repeated-shrinkage collapse. Repeats to
+    max-change < tol. metric_ranges is updated to the effective raw
+    bounds so downstream display stays truthful.
+    """
+    keys = [k for k in METRIC_FIELDS if metric_ranges.get(k) is not None]
+    raw = {}
+    for m in models:
+        r = {}
+        for k in keys:
+            v = m["_parsed"][k]
+            if v is not None:
+                r[k] = float(v)
+        raw[id(m)] = r
+    colmin = {k: min(r[k] for r in raw.values() if k in r) for k in keys}
+    colmax = {k: max(r[k] for r in raw.values() if k in r) for k in keys}
+    N0 = {}
+    for i, r in raw.items():
+        row = {}
+        for k, v in r.items():
+            if colmax[k] > colmin[k]:
+                row[k] = (v - colmin[k]) / (colmax[k] - colmin[k])
+            else:
+                row[k] = 0.5
+        N0[i] = row
+    Nk = {i: dict(v) for i, v in N0.items()}
+    ids = list(raw.keys())
+    bounds = {}
+    for rnd in range(1, max_rounds + 1):
+        mu = {}
+        for i in ids:
+            cols = Nk[i]
+            if len(cols) >= 2:
+                tot = sum(cols.values())
+                for b, vb in cols.items():
+                    mu[(i, b)] = (tot - vb) / (len(cols) - 1)
+        if not mu:
+            break
+        gmin, gmax = min(mu.values()), max(mu.values())
+        span = gmax - gmin
+        if span == 0:
+            break
+        bounds = {}
+        for k in keys:
+            ps = [(mu[(i, k)] - gmin) / span for i in ids if (i, k) in mu]
+            if len(ps) >= 2:
+                lo, hi = min(ps), max(ps)
+                if hi > lo:
+                    bounds[k] = (lo, hi)
+        maxchg = 0.0
+        Nnew = {}
+        for i in ids:
+            row = {}
+            for b, vb in Nk[i].items():
+                if b in bounds:
+                    lo, hi = bounds[b]
+                    nv = lo + (hi - lo) * N0[i][b]
+                else:
+                    nv = vb
+                row[b] = nv
+                d = abs(nv - vb)
+                if d > maxchg:
+                    maxchg = d
+            Nnew[i] = row
+        Nk = Nnew
+        if rnd <= 6 or rnd % 20 == 0 or maxchg < tol:
+            print(f"  iter round {rnd}: maxchange={maxchg:.3e}")
+        if maxchg < tol:
+            print(f"  Iterative LOO normalization converged at round {rnd}")
+            break
+    for m in models:
+        m["_norm"] = {}
+        row = Nk.get(id(m), {})
+        for k in METRIC_FIELDS:
+            if k in row:
+                m["_norm"][k] = Fraction(row[k]).limit_denominator(10**9)
+            else:
+                m["_norm"][k] = None
+    for k in keys:
+        if k in bounds:
+            lo, hi = bounds[k]
+            cmin, cmax = colmin[k], colmax[k]
+            raw_lo = cmin - lo * (cmax - cmin) / (hi - lo)
+            raw_hi = cmin + (1.0 - lo) * (cmax - cmin) / (hi - lo)
+            metric_ranges[k] = {"min": Fraction(raw_lo).limit_denominator(10**9),
+                                "max": Fraction(raw_hi).limit_denominator(10**9),
+                                "count": metric_ranges[k]["count"]}
+    print(f"  Iterative LOO normalization done ({len(bounds)}/{len(keys)} columns rescaled)")
 
 
 def compute_scores(data):
@@ -382,17 +487,21 @@ def compute_scores(data):
             metric_ranges[key] = None
 
     # ── Normalize metrics ──
-    for m in models:
-        m["_norm"] = {}
-        for key in METRIC_FIELDS:
-            val = m["_parsed"][key]
-            rng = metric_ranges.get(key)
-            if val is None or rng is None:
-                m["_norm"][key] = None
-            elif rng["max"] == rng["min"]:
-                m["_norm"][key] = Fraction(1, 2)
-            else:
-                m["_norm"][key] = (val - rng["min"]) / (rng["max"] - rng["min"])
+    if ITERATIVE_NORM:
+        print("  Using V20 experimental iterative LOO normalization...")
+        _iterative_normalize(models, metric_ranges)
+    else:
+        for m in models:
+            m["_norm"] = {}
+            for key in METRIC_FIELDS:
+                val = m["_parsed"][key]
+                rng = metric_ranges.get(key)
+                if val is None or rng is None:
+                    m["_norm"][key] = None
+                elif rng["max"] == rng["min"]:
+                    m["_norm"][key] = Fraction(1, 2)
+                else:
+                    m["_norm"][key] = (val - rng["min"]) / (rng["max"] - rng["min"])
 
     # ── Composite ability = exact Fraction mean ──
     for m in models:
@@ -1072,7 +1181,7 @@ def plot_analysis(models, pareto, brand_frontiers, x_dist, mapping_meta):
     ax.set_ylabel("综合性能（0=帕累托前沿首级）",
                   fontsize=12, color=TEXT_COLOR, labelpad=79, fontweight="bold")
     st = fig.suptitle(
-        "LLM通用能力和发布时间",
+        "LLM通用能力和发布时间" + ("（迭代归一化）" if ITERATIVE_NORM else ""),
         fontsize=14, color=TEXT_COLOR, fontweight="bold", x=0.5, y=0.9,
         ha="center", va="center",
     )
@@ -2369,6 +2478,8 @@ def save_results(models, pareto, brand_frontiers, metric_ranges, x_dist, mapping
         ],
     }
 
+    if ITERATIVE_NORM:
+        output["metadata"]["normalization"] = "V20-iterative-loo (per-column bounds from leave-one-out means)"
     json_path = os.path.join(OUTPUT_DIR, "analysis_results.json")
     with open(json_path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
@@ -2408,8 +2519,10 @@ def generate_readme(models, pareto, brand_frontiers, x_dist, mapping_meta):
     n_total = len(models)
 
     lines = []
-    lines.append("# LLM Leaderboard — 综合能力 vs 发布时间\n")
-    lines.append("![Pareto Analysis](output/pareto_analysis.png)\n")
+    lines.append("# LLM Leaderboard — 综合能力 vs 发布时间" + ("（迭代归一化实验）\n" if ITERATIVE_NORM else "\n"))
+    lines.append("![Pareto Analysis](output" + ("_iter" if ITERATIVE_NORM else "") + "/pareto_analysis.png)\n")
+    if ITERATIVE_NORM:
+        lines.append("> **实验方法说明**：本版综合能力采用 V20 迭代式 leave-one-out 归一化（每列上下界由其余 19 项的排除后均值决定，Jacobi 并行迭代至收敛），而非默认的每列独立 min-max。输出位于 `output_iter/`，不覆盖标准结果。\n")
 
 
     # ── 全部模型表格（要求一/三/六/八）──────────────────────────────────
@@ -2538,7 +2651,7 @@ def generate_readme(models, pareto, brand_frontiers, x_dist, mapping_meta):
                  f"能力低于该级的 {ya.get('below_baseline', 0)} 个模型和发布时间大于品牌前沿最大值的模型不出现在图中；"
                  "横轴为发布时间（线性）。\n")
 
-    readme_path = os.path.join(BASE_DIR, "README.md")
+    readme_path = os.path.join(BASE_DIR, "README_ITER.md" if ITERATIVE_NORM else "README.md")
     with open(readme_path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines))
     print(f"README saved to {readme_path}")
@@ -2560,6 +2673,8 @@ def main():
     print(f"  {len(METRIC_FIELDS)} benchmark metrics "
           f"(V18: +analystAgent +tauBanking +terminalbenchV21/V40, "
           f"-agenticIndex -codingIndex)")
+    if ITERATIVE_NORM:
+        print("  V20 experimental iterative LOO normalization: ON (outputs -> output_iter/)")
     print("=" * 60)
 
     print("Loading data...")
