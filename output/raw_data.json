@@ -3822,7 +3822,7 @@
     "isReasoning": true,
     "isOpenWeights": true,
     "paramClass": "small",
-    "priceClass": "low",
+    "priceClass": null,
     "modelCreatorName": "IBM",
     "modelCreatorColor": "#0f62fe",
     "modelCreatorLogo": "/img/logos/ibm.svg",
@@ -3846,10 +3846,9 @@
       "gpqa-diamond": 0.644444444444444,
       "tau3-banking": 0.144329896907216
     },
-    "intelligenceIndexCostPerTask": 0.0716641484962871,
-    "price1mInputTokens": 0.16,
-    "price1mOutputTokens": 0.65,
-    "cacheHitPrice": 0.04,
+    "price1mInputTokens": null,
+    "price1mOutputTokens": null,
+    "cacheHitPrice": null,
     "cacheWritePrice": null,
     "medianOutputTokensPerSecond": 41.3567444958303,
     "percentile05OutputTokensPerSecond": 17.8657704170456,
@@ -9670,6 +9669,8 @@
       "itbench-aa": 0.485875706214689,
       "mlcr-aa": 0.416666666666667,
       "mmmu-pro": 0.86878612716763,
+      "healthbench": 0.5822174183894343,
+      "healthbench-professional": 0.6597887253032397,
       "terminalbench-2-1": 0.883895131086142,
       "gpqa-diamond": 0.960606060606061,
       "tau3-banking": 0.414432989690722
@@ -9721,6 +9722,8 @@
     "mlcr-aa": 0.416666666666667,
     "mmmuPro": 0.86878612716763,
     "mmmu-pro": 0.86878612716763,
+    "healthbench": 0.5822174183894343,
+    "healthbench-professional": 0.6597887253032397,
     "terminalBench21": 0.883895131086142,
     "terminalbench-2-1": 0.883895131086142,
     "gpqa": 0.960606060606061,
@@ -9771,7 +9774,9 @@
       "code2video-aa": 1535.57,
       "itbench-aa": 0.382297551789077,
       "mlcr-aa": 0.277777777777778,
-      "mmmu-pro": 0.876878612716763
+      "mmmu-pro": 0.876878612716763,
+      "healthbench": 0.5698718859725104,
+      "healthbench-professional": 0.5988078080045365
     },
     "intelligenceIndexCostPerTask": 5.982012019521066,
     "price1mInputTokens": 4,
@@ -9820,6 +9825,8 @@
     "mlcr-aa": 0.277777777777778,
     "mmmuPro": 0.876878612716763,
     "mmmu-pro": 0.876878612716763,
+    "healthbench": 0.5698718859725104,
+    "healthbench-professional": 0.5988078080045365,
     "releaseDate": "2026-09-22",
     "creator": {
       "slug": "anthropic",
@@ -12290,6 +12297,8 @@
       "code2video-aa": 1324.83,
       "itbench-aa": 0.495291902071563,
       "mlcr-aa": 0.155555555555556,
+      "healthbench": 0.5721725564919435,
+      "healthbench-professional": 0.5775168188078925,
       "terminalbench-2-1": 0.913857677902622,
       "gpqa-diamond": 0.937373737373737,
       "tau3-banking": 0.472164948453608
@@ -12339,6 +12348,8 @@
     "itbenchSre": 0.495291902071563,
     "itbench-aa": 0.495291902071563,
     "mlcr-aa": 0.155555555555556,
+    "healthbench": 0.5721725564919435,
+    "healthbench-professional": 0.5775168188078925,
     "terminalBench21": 0.913857677902622,
     "terminalbench-2-1": 0.913857677902622,
     "gpqa": 0.937373737373737,
@@ -16983,7 +16994,9 @@
       "aa-3d": 994.7188,
       "code2video-aa": 1126.6,
       "itbench-aa": 0.420809792843691,
-      "mlcr-aa": 0.2
+      "mlcr-aa": 0.2,
+      "healthbench": 0.5601757995204535,
+      "healthbench-professional": 0.5577613438810265
     },
     "intelligenceIndexCostPerTask": 3.236738638452325,
     "price1mInputTokens": 2,
@@ -17030,6 +17043,8 @@
     "itbenchSre": 0.420809792843691,
     "itbench-aa": 0.420809792843691,
     "mlcr-aa": 0.2,
+    "healthbench": 0.5601757995204535,
+    "healthbench-professional": 0.5577613438810265,
     "releaseDate": "2026-09-21",
     "creator": {
       "slug": "xai",
@@ -22033,7 +22048,9 @@
       "aa-3d": 1000,
       "code2video-aa": 1029.65,
       "mlcr-aa": 0.261111111111111,
-      "mmmu-pro": 0.796531791907514
+      "mmmu-pro": 0.796531791907514,
+      "healthbench": 0.5457844450559368,
+      "healthbench-professional": 0.6189434003955461
     },
     "intelligenceIndexCostPerTask": 0.06782295669812205,
     "price1mInputTokens": 0.1,
@@ -22080,6 +22097,8 @@
     "mlcr-aa": 0.261111111111111,
     "mmmuPro": 0.796531791907514,
     "mmmu-pro": 0.796531791907514,
+    "healthbench": 0.5457844450559368,
+    "healthbench-professional": 0.6189434003955461,
     "releaseDate": "2026-09-22",
     "creator": {
       "slug": "openai",
@@ -24778,7 +24797,9 @@
       "harvey-lab-aa": 0.005555555555555555,
       "aa-3d": 997.7712,
       "code2video-aa": 1192.35,
-      "mlcr-aa": 0.35
+      "mlcr-aa": 0.35,
+      "healthbench": 0.5848216837943483,
+      "healthbench-professional": 0.5835502941870331
     },
     "intelligenceIndexCostPerTask": 0.21276971216992022,
     "price1mInputTokens": 0.1,
@@ -24823,6 +24844,8 @@
     "aa-3d": 997.7712,
     "code2video-aa": 1192.35,
     "mlcr-aa": 0.35,
+    "healthbench": 0.5848216837943483,
+    "healthbench-professional": 0.5835502941870331,
     "releaseDate": "2026-10-07",
     "creator": {
       "slug": "anthropic",
@@ -27239,6 +27262,8 @@
       "itbench-aa": 0.525423728813559,
       "mlcr-aa": 0.105555555555556,
       "mmmu-pro": 0.85606936416185,
+      "healthbench": 0.48378515868589594,
+      "healthbench-professional": 0.5169364567799689,
       "terminalbench-2-1": 0.876404494382023,
       "gpqa-diamond": 0.952525252525253,
       "tau3-banking": 0.449484536082474
@@ -27290,6 +27315,8 @@
     "mlcr-aa": 0.105555555555556,
     "mmmuPro": 0.85606936416185,
     "mmmu-pro": 0.85606936416185,
+    "healthbench": 0.48378515868589594,
+    "healthbench-professional": 0.5169364567799689,
     "terminalBench21": 0.876404494382023,
     "terminalbench-2-1": 0.876404494382023,
     "gpqa": 0.952525252525253,
@@ -30588,7 +30615,7 @@
       "omniscience-accuracy": 0.09566666666666666,
       "omniscience-non-hallucination": 0.1142646516771102,
       "automationbench-aa": 0.004483886019625834,
-      "gdpval-aa-normalized": -59.24,
+      "gdpval-aa-normalized": -50.91,
       "humanitys-last-exam": 0.0486561631139944,
       "gdp-pdf": 0.004,
       "terminalbench-4-0": 0,
@@ -30614,8 +30641,8 @@
     "omniscienceNonHallucination": 0.1142646516771102,
     "omniscience-non-hallucination": 0.1142646516771102,
     "automationbench-aa": 0.004483886019625834,
-    "gdpvalNormalized": -59.24,
-    "gdpval-aa-normalized": -59.24,
+    "gdpvalNormalized": -50.91,
+    "gdpval-aa-normalized": -50.91,
     "hle": 0.0486561631139944,
     "humanitys-last-exam": 0.0486561631139944,
     "gdp-pdf": 0.004,
@@ -34190,7 +34217,9 @@
       "harvey-lab-aa": 0.027777777777777776,
       "aa-3d": 1198.8306,
       "code2video-aa": 1443.33,
-      "mlcr-aa": 0.416666666666667
+      "mlcr-aa": 0.416666666666667,
+      "healthbench": 0.620657287652967,
+      "healthbench-professional": 0.6297154327926934
     },
     "intelligenceIndexCostPerTask": 5.4608525948098325,
     "price1mInputTokens": 2,
@@ -34235,6 +34264,8 @@
     "aa-3d": 1198.8306,
     "code2video-aa": 1443.33,
     "mlcr-aa": 0.416666666666667,
+    "healthbench": 0.620657287652967,
+    "healthbench-professional": 0.6297154327926934,
     "releaseDate": "2026-09-28",
     "creator": {
       "slug": "anthropic",
@@ -34479,7 +34510,9 @@
       "aa-3d": 1119.3508,
       "code2video-aa": 1369.3,
       "mlcr-aa": 0.383333333333333,
-      "mmmu-pro": 0.859537572254335
+      "mmmu-pro": 0.859537572254335,
+      "healthbench": 0.5851711351185636,
+      "healthbench-professional": 0.6508743489998069
     },
     "intelligenceIndexCostPerTask": 0.7241670655535033,
     "price1mInputTokens": 2,
@@ -34526,6 +34559,8 @@
     "mlcr-aa": 0.383333333333333,
     "mmmuPro": 0.859537572254335,
     "mmmu-pro": 0.859537572254335,
+    "healthbench": 0.5851711351185636,
+    "healthbench-professional": 0.6508743489998069,
     "releaseDate": "2026-09-29",
     "creator": {
       "slug": "openai",
@@ -37666,7 +37701,9 @@
       "aa-3d": 1120.9891,
       "itbench-aa": 0.494350282485876,
       "mlcr-aa": 0.338888888888889,
-      "mmmu-pro": 0.829479768786127
+      "mmmu-pro": 0.829479768786127,
+      "healthbench": 0.5417750874280344,
+      "healthbench-professional": 0.6234270683386911
     },
     "intelligenceIndexCostPerTask": 1.0446616686054255,
     "price1mInputTokens": 2,
@@ -37711,6 +37748,8 @@
     "mlcr-aa": 0.338888888888889,
     "mmmuPro": 0.829479768786127,
     "mmmu-pro": 0.829479768786127,
+    "healthbench": 0.5417750874280344,
+    "healthbench-professional": 0.6234270683386911,
     "releaseDate": "2026-09-22",
     "creator": {
       "slug": "openai",
@@ -39191,6 +39230,8 @@
       "code2video-aa": 1033.51,
       "itbench-aa": 0.460828625235405,
       "mlcr-aa": 0.172222222222222,
+      "healthbench": 0.5452947563714743,
+      "healthbench-professional": 0.5279803492969741,
       "terminalbench-2-1": 0.838951310861423,
       "gpqa-diamond": 0.917171717171717,
       "tau3-banking": 0.503092783505155
@@ -39241,6 +39282,8 @@
     "itbenchSre": 0.460828625235405,
     "itbench-aa": 0.460828625235405,
     "mlcr-aa": 0.172222222222222,
+    "healthbench": 0.5452947563714743,
+    "healthbench-professional": 0.5279803492969741,
     "terminalBench21": 0.838951310861423,
     "terminalbench-2-1": 0.838951310861423,
     "gpqa": 0.917171717171717,
@@ -40001,7 +40044,9 @@
       "harvey-lab-aa": 0.03888888888888888,
       "aa-3d": 1152.644,
       "code2video-aa": 1259.4,
-      "mlcr-aa": 0.138888888888889
+      "mlcr-aa": 0.138888888888889,
+      "healthbench": 0.4905451024738078,
+      "healthbench-professional": 0.5505325572763606
     },
     "intelligenceIndexCostPerTask": 1.6200041773385696,
     "price1mInputTokens": 2,
@@ -40046,6 +40091,8 @@
     "aa-3d": 1152.644,
     "code2video-aa": 1259.4,
     "mlcr-aa": 0.138888888888889,
+    "healthbench": 0.4905451024738078,
+    "healthbench-professional": 0.5505325572763606,
     "releaseDate": "2026-09-30",
     "creator": {
       "slug": "google",
@@ -41921,7 +41968,9 @@
       "code2video-aa": 1053.11,
       "itbench-aa": 0.469161958568738,
       "mlcr-aa": 0.238888888888889,
-      "mmmu-pro": 0.769942196531792
+      "mmmu-pro": 0.769942196531792,
+      "healthbench": 0.6088631027372047,
+      "healthbench-professional": 0.506964430189633
     },
     "intelligenceIndexCostPerTask": 0.31781327010002136,
     "price1mInputTokens": 0.3,
@@ -41969,6 +42018,8 @@
     "mlcr-aa": 0.238888888888889,
     "mmmuPro": 0.769942196531792,
     "mmmu-pro": 0.769942196531792,
+    "healthbench": 0.6088631027372047,
+    "healthbench-professional": 0.506964430189633,
     "releaseDate": "2026-09-10",
     "creator": {
       "slug": "deepseek",
@@ -46555,6 +46606,8 @@
       "itbench-aa": 0.476930320150659,
       "mlcr-aa": 0.216666666666667,
       "mmmu-pro": 0.805202312138728,
+      "healthbench": 0.5472420823039508,
+      "healthbench-professional": 0.5324162977753611,
       "terminalbench-2-1": 0.850187265917603,
       "gpqa-diamond": 0.935353535353535,
       "tau3-banking": 0.45979381443299,
@@ -46608,6 +46661,8 @@
     "mlcr-aa": 0.216666666666667,
     "mmmuPro": 0.805202312138728,
     "mmmu-pro": 0.805202312138728,
+    "healthbench": 0.5472420823039508,
+    "healthbench-professional": 0.5324162977753611,
     "terminalBench21": 0.850187265917603,
     "terminalbench-2-1": 0.850187265917603,
     "gpqa": 0.935353535353535,
