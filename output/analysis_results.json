@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 610,
+    "total_models": 611,
     "pareto_count": 21,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -17,7 +17,7 @@
         "a": 1.4048961529313946,
         "b": 6.658050988124614,
         "c": 0.0,
-        "mse_vs_quantile": 0.0010812637337815998,
+        "mse_vs_quantile": 0.0010812637337815993,
         "max_abs_deviation_vs_quantile": 0.06897892353134605,
         "uniform_density": false
       },
@@ -25,8 +25,8 @@
       "left_edge_label": "2023-09",
       "free_models": 0,
       "over_max_models": 2,
-      "plotted_models": 607,
-      "total_models": 610,
+      "plotted_models": 608,
+      "total_models": 611,
       "min_positive_cost": 1695772800.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1793145600.0,
@@ -50,35 +50,35 @@
         }
       ],
       "left_half_models": 279,
-      "right_half_models": 328,
+      "right_half_models": 329,
       "y_axis": {
         "baseline": 0.003525654462778883,
         "baseline_model": "Mistral 7B",
-        "visible_models": 609,
-        "plotted_models": 609,
+        "visible_models": 610,
+        "plotted_models": 610,
         "no_x_visible": 0,
         "below_baseline": 1,
-        "total_models": 610,
+        "total_models": 611,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.003525654462778883,
       "baseline_model": "Mistral 7B",
-      "visible_models": 609,
-      "plotted_models": 609,
+      "visible_models": 610,
+      "plotted_models": 610,
       "no_x_visible": 0,
       "below_baseline": 1,
-      "total_models": 610,
+      "total_models": 611,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
-      "plotted_models": 607,
+      "plotted_models": 608,
       "x_min": 0.0,
       "x_max": 1.0,
       "median": 0.5553848235809559,
       "left_half_models": 279,
-      "right_half_models": 328,
+      "right_half_models": 329,
       "decile_counts": [
         10,
         24,
@@ -89,7 +89,7 @@
         71,
         54,
         74,
-        63
+        64
       ],
       "note": "exp mapping x = (a^(b*t)-1)/(a^b-1) on normalized dates; pins (0,0)/(1,1)"
     }
@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 1.81584603785463,
       "max": 59.425738829526,
-      "count": 92
+      "count": 94
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -138,17 +138,17 @@
     "AA Omniscience Index": {
       "min": -71.16666666666667,
       "max": 53.5,
-      "count": 110
+      "count": 111
     },
     "AA-Omniscience Accuracy": {
       "min": 0.091,
       "max": 0.684,
-      "count": 110
+      "count": 111
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.04354280059376546,
       "max": 0.9575718015665796,
-      "count": 110
+      "count": 111
     },
     "GDPval-AA Normalized": {
       "min": -402.18,
@@ -193,7 +193,7 @@
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6717171717171717,
-      "count": 239
+      "count": 240
     }
   },
   "benchmark_calibration": {
@@ -207,7 +207,7 @@
         "upper": 1.0,
         "span": 0.822945963690177,
         "metric_label": "AA Intelligence Index",
-        "model_count": 92
+        "model_count": 94
       },
       "gpqa": {
         "lower": 0.0,
@@ -263,21 +263,21 @@
         "upper": 1.0,
         "span": 0.822945963690177,
         "metric_label": "AA Omniscience Index",
-        "model_count": 110
+        "model_count": 111
       },
       "omniscienceAccuracy": {
         "lower": 0.17188189647616875,
         "upper": 1.0,
         "span": 0.8281181035238312,
         "metric_label": "AA-Omniscience Accuracy",
-        "model_count": 110
+        "model_count": 111
       },
       "omniscienceNonHallucination": {
         "lower": 0.1707345512134656,
         "upper": 1.0,
         "span": 0.8292654487865344,
         "metric_label": "AA-Omniscience Non-Hallucination",
-        "model_count": 110
+        "model_count": 111
       },
       "gdpvalNormalized": {
         "lower": 0.040608255545109,
@@ -340,7 +340,7 @@
         "upper": 1.0,
         "span": 0.9592094350350655,
         "metric_label": "Terminal-Bench 4.0",
-        "model_count": 239
+        "model_count": 240
       }
     }
   },
@@ -2631,6 +2631,24 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Gemini 4 Carbon (low)",
+      "full_name": "Gemini 4 Carbon (Low)",
+      "creator": "Google",
+      "creator_slug": "google",
+      "creator_color": "#34A853",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/google.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.8979470519691053,
+      "composite_ability_calibrated": 0.919325288639915,
+      "release_date": "2026-10-28",
+      "release_timestamp": 1793145600.0,
+      "x_axis_position": 1.0,
+      "in_chart": true,
+      "chart_y": 0.897585975506599,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "Claude Fable 5.1 (high with fallback)",
       "full_name": "Claude Fable 5.1 (High, Default Fallback)",
       "creator": "Anthropic",
@@ -3621,6 +3639,24 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Grok 4.7 (xhigh)",
+      "full_name": "Grok 4.7 (Xhigh)",
+      "creator": "SpaceXAI",
+      "creator_slug": "spacexai",
+      "creator_color": "#736cd3",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/spacexai.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.7618859052453523,
+      "composite_ability_calibrated": 0.7719464946229689,
+      "release_date": "2026-09-21",
+      "release_timestamp": 1789948800.0,
+      "x_axis_position": 0.9200707203960866,
+      "in_chart": true,
+      "chart_y": 0.7610434269371228,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "GPT-6 Sol (medium)",
       "full_name": "GPT-6 Sol (Medium)",
       "creator": "OpenAI",
@@ -3635,24 +3671,6 @@
       "x_axis_position": 0.9221537904323692,
       "in_chart": true,
       "chart_y": 0.7596607231590319,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
-      "model": "Grok 4.7 (xhigh)",
-      "full_name": "Grok 4.7 (Xhigh)",
-      "creator": "SpaceXAI",
-      "creator_slug": "spacexai",
-      "creator_color": "#736cd3",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/spacexai.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.7602726786913684,
-      "composite_ability_calibrated": 0.7706328340600617,
-      "release_date": "2026-09-21",
-      "release_timestamp": 1789948800.0,
-      "x_axis_position": 0.9200707203960866,
-      "in_chart": true,
-      "chart_y": 0.7594244925799978,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -7510,7 +7528,7 @@
     },
     {
       "model": "K-EXAONE 2.0",
-      "full_name": "K-EXAONE 2.0 0803",
+      "full_name": "K-EXAONE 2.0",
       "creator": "LG AI Research",
       "creator_slug": "lg-ai-research",
       "creator_color": "#df3b8a",
@@ -9903,24 +9921,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "Granite 4.2 8B",
-      "full_name": "Granite 4.2 8B",
-      "creator": "IBM",
-      "creator_slug": "ibm",
-      "creator_color": "#0f62fe",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/ibm.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.2904145180818364,
-      "composite_ability_calibrated": 0.3232645806699524,
-      "release_date": "2026-08-25",
-      "release_timestamp": 1787616000.0,
-      "x_axis_position": 0.8653805456506962,
-      "in_chart": true,
-      "chart_y": 0.28790391333596194,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Mistral Small 4",
       "full_name": "Mistral Small 4 (Reasoning)",
       "creator": "Mistral",
@@ -10133,6 +10133,24 @@
       "x_axis_position": 0.3378019152302038,
       "in_chart": true,
       "chart_y": 0.267039753590706,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Granite 4.2 8B",
+      "full_name": "Granite 4.2 8B",
+      "creator": "IBM",
+      "creator_slug": "ibm",
+      "creator_color": "#0f62fe",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/ibm.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.26953442619002127,
+      "composite_ability_calibrated": 0.3142605637067838,
+      "release_date": "2026-08-25",
+      "release_timestamp": 1787616000.0,
+      "x_axis_position": 0.8653805456506962,
+      "in_chart": true,
+      "chart_y": 0.26694994499214253,
       "is_pareto": false,
       "brand_frontier_of": null
     },
