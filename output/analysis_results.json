@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 1.81584603785463,
       "max": 60.025738829526,
-      "count": 108
+      "count": 109
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -193,7 +193,7 @@
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6717171717171717,
-      "count": 243
+      "count": 244
     }
   },
   "benchmark_calibration": {
@@ -207,7 +207,7 @@
         "upper": 1.0,
         "span": 0.8229632776153105,
         "metric_label": "AA Intelligence Index",
-        "model_count": 108
+        "model_count": 109
       },
       "gpqa": {
         "lower": 0.0,
@@ -340,7 +340,7 @@
         "upper": 1.0,
         "span": 0.9592295733294562,
         "metric_label": "Terminal-Bench 4.0",
-        "model_count": 243
+        "model_count": 244
       }
     }
   },
@@ -7671,24 +7671,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "K-EXAONE 2.0",
-      "full_name": "K-EXAONE 2.0",
-      "creator": "LG AI Research",
-      "creator_slug": "lg-ai-research",
-      "creator_color": "#df3b8a",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/lg.png",
-      "is_deprecated": false,
-      "composite_ability": 0.4531847405590181,
-      "composite_ability_calibrated": 0.4725442910375246,
-      "release_date": "2026-08-12",
-      "release_timestamp": 1786492800.0,
-      "x_axis_position": 0.8372710230790348,
-      "in_chart": true,
-      "chart_y": 0.4512500378058586,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Qwen3.5 9B",
       "full_name": "Qwen3.5 9B (Reasoning)",
       "creator": "Alibaba",
@@ -8657,6 +8639,24 @@
       "x_axis_position": 0.4312815124270424,
       "in_chart": true,
       "chart_y": 0.3852863601521502,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "K-EXAONE 2.0",
+      "full_name": "K-EXAONE 2.0",
+      "creator": "LG AI Research",
+      "creator_slug": "lg-ai-research",
+      "creator_color": "#df3b8a",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/lg.png",
+      "is_deprecated": false,
+      "composite_ability": 0.3850779765886862,
+      "composite_ability_calibrated": 0.4189384719290385,
+      "release_date": "2026-08-12",
+      "release_timestamp": 1786492800.0,
+      "x_axis_position": 0.8372710230790348,
+      "in_chart": true,
+      "chart_y": 0.382902303340488,
       "is_pareto": false,
       "brand_frontier_of": null
     },
