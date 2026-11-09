@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 614,
+    "total_models": 615,
     "pareto_count": 20,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -17,16 +17,16 @@
         "a": 3.2572434194665805,
         "b": 1.9676753112295144,
         "c": 0.0,
-        "mse_vs_quantile": 0.0009142261141052367,
+        "mse_vs_quantile": 0.0009142261141052371,
         "max_abs_deviation_vs_quantile": 0.0647859508772628,
         "uniform_density": false
       },
       "left_edge_cost": 1695772800.0,
       "left_edge_label": "2023-09",
       "free_models": 0,
-      "over_max_models": 4,
+      "over_max_models": 5,
       "plotted_models": 609,
-      "total_models": 614,
+      "total_models": 615,
       "min_positive_cost": 1695772800.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1793145600.0,
@@ -54,22 +54,22 @@
       "y_axis": {
         "baseline": 0.003525654462778883,
         "baseline_model": "Mistral 7B",
-        "visible_models": 613,
-        "plotted_models": 613,
+        "visible_models": 614,
+        "plotted_models": 614,
         "no_x_visible": 0,
         "below_baseline": 1,
-        "total_models": 614,
+        "total_models": 615,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.003525654462778883,
       "baseline_model": "Mistral 7B",
-      "visible_models": 613,
-      "plotted_models": 613,
+      "visible_models": 614,
+      "plotted_models": 614,
       "no_x_visible": 0,
       "below_baseline": 1,
-      "total_models": 614,
+      "total_models": 615,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 1.81584603785463,
       "max": 60.025738829526,
-      "count": 109
+      "count": 110
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -108,12 +108,12 @@
     "Humanity's Last Exam": {
       "min": 0.010658016682113068,
       "max": 0.6135310472659871,
-      "count": 678
+      "count": 679
     },
     "MMMU Pro": {
       "min": 0.14508670520231215,
       "max": 0.892485549132948,
-      "count": 302
+      "count": 303
     },
     "IFBench Instruction Following": {
       "min": 0.12108843537414966,
@@ -123,37 +123,37 @@
     "SciCode Coding": {
       "min": 0.06944444444444445,
       "max": 0.6689814814814815,
-      "count": 245
+      "count": 246
     },
     "CritPt Physics": {
       "min": 0.0,
       "max": 0.32857142857142857,
-      "count": 594
+      "count": 595
     },
     "AA-LCR Long Context": {
       "min": 0.0,
       "max": 0.8866666666666667,
-      "count": 590
+      "count": 591
     },
     "AA Omniscience Index": {
       "min": -71.16666666666667,
       "max": 53.5,
-      "count": 124
+      "count": 125
     },
     "AA-Omniscience Accuracy": {
       "min": 0.091,
       "max": 0.684,
-      "count": 124
+      "count": 125
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.04354280059376546,
       "max": 0.9575718015665796,
-      "count": 124
+      "count": 125
     },
     "GDPval-AA Normalized": {
       "min": -402.18,
       "max": 1866.27,
-      "count": 309
+      "count": 310
     },
     "AA Analyst Agent": {
       "min": 0.0125,
@@ -193,7 +193,7 @@
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6717171717171717,
-      "count": 244
+      "count": 245
     }
   },
   "benchmark_calibration": {
@@ -207,7 +207,7 @@
         "upper": 1.0,
         "span": 0.8229632776153105,
         "metric_label": "AA Intelligence Index",
-        "model_count": 109
+        "model_count": 110
       },
       "gpqa": {
         "lower": 0.0,
@@ -221,14 +221,14 @@
         "upper": 0.9503108923511636,
         "span": 0.9503108923511636,
         "metric_label": "Humanity's Last Exam",
-        "model_count": 604
+        "model_count": 605
       },
       "mmmuPro": {
         "lower": 0.01681872316511821,
         "upper": 0.9666101577192493,
         "span": 0.9497914345541311,
         "metric_label": "MMMU Pro",
-        "model_count": 296
+        "model_count": 297
       },
       "ifbench": {
         "lower": 0.0,
@@ -242,49 +242,49 @@
         "upper": 0.9502769663185467,
         "span": 0.9096904055855471,
         "metric_label": "SciCode Coding",
-        "model_count": 245
+        "model_count": 246
       },
       "critpt": {
         "lower": 0.0,
         "upper": 0.9527730118403572,
         "span": 0.9527730118403572,
         "metric_label": "CritPt Physics",
-        "model_count": 591
+        "model_count": 592
       },
       "lcr": {
         "lower": 0.0,
         "upper": 1.0,
         "span": 1.0,
         "metric_label": "AA-LCR Long Context",
-        "model_count": 583
+        "model_count": 584
       },
       "omniscience": {
         "lower": 0.17703672238468948,
         "upper": 1.0,
         "span": 0.8229632776153105,
         "metric_label": "AA Omniscience Index",
-        "model_count": 124
+        "model_count": 125
       },
       "omniscienceAccuracy": {
         "lower": 0.1718842754359459,
         "upper": 1.0,
         "span": 0.8281157245640541,
         "metric_label": "AA-Omniscience Accuracy",
-        "model_count": 124
+        "model_count": 125
       },
       "omniscienceNonHallucination": {
         "lower": 0.17071734730716648,
         "upper": 1.0,
         "span": 0.8292826526928335,
         "metric_label": "AA-Omniscience Non-Hallucination",
-        "model_count": 124
+        "model_count": 125
       },
       "gdpvalNormalized": {
         "lower": 0.040588204790269276,
         "upper": 1.0,
         "span": 0.9594117952097307,
         "metric_label": "GDPval-AA Normalized",
-        "model_count": 308
+        "model_count": 309
       },
       "analystAgent": {
         "lower": 0.3325034629173094,
@@ -340,7 +340,7 @@
         "upper": 1.0,
         "span": 0.9592295733294562,
         "metric_label": "Terminal-Bench 4.0",
-        "model_count": 244
+        "model_count": 245
       }
     }
   },
@@ -5579,6 +5579,24 @@
       "x_axis_position": 0.6852285793506068,
       "in_chart": true,
       "chart_y": 0.5991228825196007,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Agnes 2.5 Pro Theta",
+      "full_name": "Agnes 2.5 Pro Theta",
+      "creator": "Sapiens AI",
+      "creator_slug": "sapiens-ai",
+      "creator_color": "#1521a9",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/sapiens.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.5984832282204916,
+      "composite_ability_calibrated": 0.6292273066139014,
+      "release_date": "2026-11-07",
+      "release_timestamp": 1794009600.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.597062610213972,
       "is_pareto": false,
       "brand_frontier_of": null
     },
