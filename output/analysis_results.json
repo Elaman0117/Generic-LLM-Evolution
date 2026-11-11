@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 1.81584603785463,
       "max": 64.563595756626,
-      "count": 118
+      "count": 119
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -207,7 +207,7 @@
         "upper": 1.0,
         "span": 0.8217142562531266,
         "metric_label": "AA Intelligence Index",
-        "model_count": 118
+        "model_count": 119
       },
       "gpqa": {
         "lower": 0.0,
@@ -4366,13 +4366,13 @@
       "creator_color": "#ff7018",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos/alibaba.svg",
       "is_deprecated": false,
-      "composite_ability": 0.700355617935566,
-      "composite_ability_calibrated": 0.6942519839776407,
+      "composite_ability": 0.6990274115575494,
+      "composite_ability_calibrated": 0.6930547027700893,
       "release_date": "2026-08-26",
       "release_timestamp": 1787702400.0,
       "x_axis_position": 0.8478716628180023,
       "in_chart": true,
-      "chart_y": 0.6994939797914588,
+      "chart_y": 0.6981619541084693,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -6465,24 +6465,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "Apodex 1.1",
-      "full_name": "Apodex 1.1",
-      "creator": "Apodex",
-      "creator_slug": "apodex",
-      "creator_color": "#0FD9D2",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/apodex.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.543469788680221,
-      "composite_ability_calibrated": 0.5524834718253566,
-      "release_date": "2026-08-30",
-      "release_timestamp": 1788048000.0,
-      "x_axis_position": 0.8554384023304122,
-      "in_chart": true,
-      "chart_y": 0.5421570197195607,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Qwen3.6 35B A3B",
       "full_name": "Qwen3.6 35B A3B (Reasoning)",
       "creator": "Alibaba",
@@ -6821,6 +6803,24 @@
       "x_axis_position": 0.4321192954908699,
       "in_chart": true,
       "chart_y": 0.5183364861532703,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Apodex 1.1",
+      "full_name": "Apodex 1.1",
+      "creator": "Apodex",
+      "creator_slug": "apodex",
+      "creator_color": "#0FD9D2",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/apodex.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.5185887752771069,
+      "composite_ability_calibrated": 0.5378385485426957,
+      "release_date": "2026-08-30",
+      "release_timestamp": 1788048000.0,
+      "x_axis_position": 0.8554384023304122,
+      "in_chart": true,
+      "chart_y": 0.5172044600719802,
       "is_pareto": false,
       "brand_frontier_of": null
     },

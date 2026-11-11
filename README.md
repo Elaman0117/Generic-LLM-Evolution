@@ -125,7 +125,7 @@
 | 115 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5 Codex (high) | 0.7060 | 2025-09-23 | 0.3818 | ✅ |
 | 116 | <img src="https://artificialanalysis.ai/img/logos/spacexai.svg" width="18" alt="SpaceXAI" /> SpaceXAI | Grok 4.20 0309 | 0.7040 | 2026-03-10 | 0.5764 | ❌ |
 | 117 | <img src="https://artificialanalysis.ai/img/logos/meta.svg" width="18" alt="Meta" /> Meta | Muse Spark Open (xhigh) | 0.7038 | 2026-10-15 | 0.9468 | ❌ |
-| 118 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.8-Flash-Next | 0.7004 | 2026-08-26 | 0.8479 | ❌ |
+| 118 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.8-Flash-Next | 0.6990 | 2026-08-26 | 0.8479 | ❌ |
 | 119 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 27B | 0.6947 | 2026-02-24 | 0.5576 | ❌ |
 | 120 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.2 (medium) | 0.6938 | 2025-12-11 | 0.4654 | ❌ |
 | 121 | <img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Opus 4.7 (non-reasoning, high) | 0.6922 | 2026-04-16 | 0.6284 | ❌ |
@@ -242,26 +242,26 @@
 | 232 | <img src="https://artificialanalysis.ai/img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova 2.0 Pro Preview (medium) | 0.5519 | 2025-11-27 | 0.4496 | ❌ |
 | 233 | <img src="https://artificialanalysis.ai/img/logos/ifm.svg" width="18" alt="Institute of Foundation Models" /> Institute of Foundation Models | K2 Horizon 375B A23B | 0.5489 | 2026-09-03 | 0.8631 | ❌ |
 | 234 | <img src="https://artificialanalysis.ai/img/logos/spacexai.svg" width="18" alt="SpaceXAI" /> SpaceXAI | Grok 4 Fast | 0.5441 | 2025-09-19 | 0.3778 | ❌ |
-| 235 | <img src="https://artificialanalysis.ai/img/logos/apodex.svg" width="18" alt="Apodex" /> Apodex | Apodex 1.1 | 0.5435 | 2026-08-30 | 0.8554 | ❌ |
-| 236 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.6 35B A3B | 0.5433 | 2026-04-16 | 0.6284 | ❌ |
-| 237 | <img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Haiku 5.5 (medium) | 0.5432 | 2026-10-07 | 0.9303 | ❌ |
-| 238 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Luna (xhigh) | 0.5410 | 2026-09-22 | 0.9001 | ❌ |
-| 239 | <img src="https://artificialanalysis.ai/img/logos/upstage.svg" width="18" alt="Upstage" /> Upstage | Solar Pro 4 | 0.5402 | 2026-08-06 | 0.8109 | ❌ |
-| 240 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.6 27B (non-reasoning) | 0.5397 | 2026-04-22 | 0.6372 | ❌ |
-| 241 | <img src="https://artificialanalysis.ai/img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V4.1 Flash 1017 (high) | 0.5342 | 2026-10-17 | 0.9510 | ❌ |
-| 242 | <img src="https://artificialanalysis.ai/img/logos/kimi.jpg" width="18" alt="Kimi" /> Kimi | Kimi K2.5 (non-reasoning) | 0.5337 | 2026-01-27 | 0.5216 | ❌ |
-| 243 | <img src="https://artificialanalysis.ai/img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 3 Flash (non-reasoning) | 0.5317 | 2025-12-17 | 0.4723 | ❌ |
-| 244 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 122B A10B (non-reasoning) | 0.5294 | 2026-02-24 | 0.5576 | ❌ |
-| 245 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.5 (non-reasoning) | 0.5292 | 2026-04-23 | 0.6387 | ❌ |
-| 246 | <img src="https://artificialanalysis.ai/img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V3.2 Speciale | 0.5272 | 2025-12-01 | 0.4541 | ❌ |
-| 247 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | o4-mini (high) | 0.5269 | 2025-04-16 | 0.2470 | ❌ |
-| 248 | <img src="https://artificialanalysis.ai/img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova 2.0 Lite (medium) | 0.5264 | 2025-10-29 | 0.4183 | ❌ |
-| 249 | <img src="https://artificialanalysis.ai/img/logos/bytedance.svg" width="18" alt="ByteDance Seed" /> ByteDance Seed | Doubao Seed Code | 0.5264 | 2025-11-11 | 0.4321 | ❌ |
-| 250 | <img src="https://artificialanalysis.ai/img/logos/zai.svg" width="18" alt="Z AI" /> Z AI | GLM-5.3 (low) | 0.5264 | 2026-08-18 | 0.8329 | ❌ |
-| 251 | <img src="https://artificialanalysis.ai/img/logos/china-mobile.png" width="18" alt="China Mobile" /> China Mobile | JT-35B-Flash | 0.5260 | 2026-05-14 | 0.6704 | ❌ |
-| 252 | <img src="https://artificialanalysis.ai/img/logos/minimax.svg" width="18" alt="MiniMax" /> MiniMax | MiniMax-M2.7 | 0.5242 | 2026-03-18 | 0.5873 | ❌ |
-| 253 | <img src="https://artificialanalysis.ai/img/logos/ifm.svg" width="18" alt="Institute of Foundation Models" /> Institute of Foundation Models | K2 Horizon MoVA 36B A4B | 0.5239 | 2026-09-03 | 0.8631 | ❌ |
-| 254 | <img src="https://artificialanalysis.ai/img/logos/kwaikat.svg" width="18" alt="KwaiKAT" /> KwaiKAT | KAT-Coder-Pro V1 | 0.5197 | 2025-11-11 | 0.4321 | ❌ |
+| 235 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.6 35B A3B | 0.5433 | 2026-04-16 | 0.6284 | ❌ |
+| 236 | <img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" alt="Anthropic" /> Anthropic | Claude Haiku 5.5 (medium) | 0.5432 | 2026-10-07 | 0.9303 | ❌ |
+| 237 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Luna (xhigh) | 0.5410 | 2026-09-22 | 0.9001 | ❌ |
+| 238 | <img src="https://artificialanalysis.ai/img/logos/upstage.svg" width="18" alt="Upstage" /> Upstage | Solar Pro 4 | 0.5402 | 2026-08-06 | 0.8109 | ❌ |
+| 239 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.6 27B (non-reasoning) | 0.5397 | 2026-04-22 | 0.6372 | ❌ |
+| 240 | <img src="https://artificialanalysis.ai/img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V4.1 Flash 1017 (high) | 0.5342 | 2026-10-17 | 0.9510 | ❌ |
+| 241 | <img src="https://artificialanalysis.ai/img/logos/kimi.jpg" width="18" alt="Kimi" /> Kimi | Kimi K2.5 (non-reasoning) | 0.5337 | 2026-01-27 | 0.5216 | ❌ |
+| 242 | <img src="https://artificialanalysis.ai/img/logos/google.svg" width="18" alt="Google" /> Google | Gemini 3 Flash (non-reasoning) | 0.5317 | 2025-12-17 | 0.4723 | ❌ |
+| 243 | <img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" alt="Alibaba" /> Alibaba | Qwen3.5 122B A10B (non-reasoning) | 0.5294 | 2026-02-24 | 0.5576 | ❌ |
+| 244 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-5.5 (non-reasoning) | 0.5292 | 2026-04-23 | 0.6387 | ❌ |
+| 245 | <img src="https://artificialanalysis.ai/img/logos/deepseek.svg" width="18" alt="DeepSeek" /> DeepSeek | DeepSeek V3.2 Speciale | 0.5272 | 2025-12-01 | 0.4541 | ❌ |
+| 246 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | o4-mini (high) | 0.5269 | 2025-04-16 | 0.2470 | ❌ |
+| 247 | <img src="https://artificialanalysis.ai/img/logos/aws.svg" width="18" alt="Amazon" /> Amazon | Nova 2.0 Lite (medium) | 0.5264 | 2025-10-29 | 0.4183 | ❌ |
+| 248 | <img src="https://artificialanalysis.ai/img/logos/bytedance.svg" width="18" alt="ByteDance Seed" /> ByteDance Seed | Doubao Seed Code | 0.5264 | 2025-11-11 | 0.4321 | ❌ |
+| 249 | <img src="https://artificialanalysis.ai/img/logos/zai.svg" width="18" alt="Z AI" /> Z AI | GLM-5.3 (low) | 0.5264 | 2026-08-18 | 0.8329 | ❌ |
+| 250 | <img src="https://artificialanalysis.ai/img/logos/china-mobile.png" width="18" alt="China Mobile" /> China Mobile | JT-35B-Flash | 0.5260 | 2026-05-14 | 0.6704 | ❌ |
+| 251 | <img src="https://artificialanalysis.ai/img/logos/minimax.svg" width="18" alt="MiniMax" /> MiniMax | MiniMax-M2.7 | 0.5242 | 2026-03-18 | 0.5873 | ❌ |
+| 252 | <img src="https://artificialanalysis.ai/img/logos/ifm.svg" width="18" alt="Institute of Foundation Models" /> Institute of Foundation Models | K2 Horizon MoVA 36B A4B | 0.5239 | 2026-09-03 | 0.8631 | ❌ |
+| 253 | <img src="https://artificialanalysis.ai/img/logos/kwaikat.svg" width="18" alt="KwaiKAT" /> KwaiKAT | KAT-Coder-Pro V1 | 0.5197 | 2025-11-11 | 0.4321 | ❌ |
+| 254 | <img src="https://artificialanalysis.ai/img/logos/apodex.svg" width="18" alt="Apodex" /> Apodex | Apodex 1.1 | 0.5186 | 2026-08-30 | 0.8554 | ❌ |
 | 255 | <img src="https://artificialanalysis.ai/img/logos/nvidia.svg" width="18" alt="NVIDIA" /> NVIDIA | Nemotron 3 Ultra | 0.5175 | 2026-06-04 | 0.7034 | ❌ |
 | 256 | <img src="https://artificialanalysis.ai/img/logos/thinking-machines.svg" width="18" alt="Thinking Machines" /> Thinking Machines | Inkling (xhigh) | 0.5174 | 2026-07-15 | 0.7719 | ❌ |
 | 257 | <img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" alt="OpenAI" /> OpenAI | GPT-6 Luna (high) | 0.5171 | 2026-09-22 | 0.9001 | ❌ |
@@ -662,7 +662,7 @@
 
 | 基准测试项 | 英文标识 | 参测模型数 | 标定映射下界 | 标定映射上界 | 映射跨度 |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| AA Intelligence Index | `intelligenceIndex` | 118 | `0.1783` | `1.0000` | `0.8217` |
+| AA Intelligence Index | `intelligenceIndex` | 119 | `0.1783` | `1.0000` | `0.8217` |
 | GPQA Diamond | `gpqa` | 535 | `0.0000` | `0.8937` | `0.8937` |
 | Humanity's Last Exam | `hle` | 610 | `0.0000` | `1.0000` | `1.0000` |
 | MMMU Pro | `mmmuPro` | 297 | `0.0161` | `0.9321` | `0.9160` |
