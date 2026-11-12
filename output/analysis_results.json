@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 622,
+    "total_models": 623,
     "pareto_count": 20,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -24,9 +24,9 @@
       "left_edge_cost": 1695772800.0,
       "left_edge_label": "2023-09",
       "free_models": 0,
-      "over_max_models": 0,
+      "over_max_models": 1,
       "plotted_models": 621,
-      "total_models": 622,
+      "total_models": 623,
       "min_positive_cost": 1695772800.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1794182400.0,
@@ -54,22 +54,22 @@
       "y_axis": {
         "baseline": 0.0028672907900788446,
         "baseline_model": "Mistral 7B",
-        "visible_models": 621,
-        "plotted_models": 621,
+        "visible_models": 622,
+        "plotted_models": 622,
         "no_x_visible": 0,
         "below_baseline": 1,
-        "total_models": 622,
+        "total_models": 623,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.0028672907900788446,
       "baseline_model": "Mistral 7B",
-      "visible_models": 621,
-      "plotted_models": 621,
+      "visible_models": 622,
+      "plotted_models": 622,
       "no_x_visible": 0,
       "below_baseline": 1,
-      "total_models": 622,
+      "total_models": 623,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 1.81584603785463,
       "max": 64.563595756626,
-      "count": 119
+      "count": 122
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -138,17 +138,17 @@
     "AA Omniscience Index": {
       "min": -71.16666666666667,
       "max": 66.76666666666667,
-      "count": 134
+      "count": 135
     },
     "AA-Omniscience Accuracy": {
       "min": 0.091,
       "max": 0.7913333333333333,
-      "count": 134
+      "count": 135
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.04354280059376546,
       "max": 0.9575718015665796,
-      "count": 134
+      "count": 135
     },
     "GDPval-AA Normalized": {
       "min": -402.18,
@@ -193,7 +193,7 @@
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6717171717171717,
-      "count": 252
+      "count": 253
     }
   },
   "benchmark_calibration": {
@@ -207,7 +207,7 @@
         "upper": 1.0,
         "span": 0.8217142562531266,
         "metric_label": "AA Intelligence Index",
-        "model_count": 119
+        "model_count": 122
       },
       "gpqa": {
         "lower": 0.0,
@@ -263,21 +263,21 @@
         "upper": 1.0,
         "span": 0.8217142562531266,
         "metric_label": "AA Omniscience Index",
-        "model_count": 134
+        "model_count": 135
       },
       "omniscienceAccuracy": {
         "lower": 0.17588071904092634,
         "upper": 1.0,
         "span": 0.8241192809590736,
         "metric_label": "AA-Omniscience Accuracy",
-        "model_count": 134
+        "model_count": 135
       },
       "omniscienceNonHallucination": {
         "lower": 0.16422411425459182,
         "upper": 1.0,
         "span": 0.8357758857454082,
         "metric_label": "AA-Omniscience Non-Hallucination",
-        "model_count": 134
+        "model_count": 135
       },
       "gdpvalNormalized": {
         "lower": 0.040156078244570084,
@@ -340,7 +340,7 @@
         "upper": 1.0,
         "span": 0.9602513345279455,
         "metric_label": "Terminal-Bench 4.0",
-        "model_count": 252
+        "model_count": 253
       }
     }
   },
@@ -4359,24 +4359,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "Qwen3.8-Flash-Next",
-      "full_name": "Qwen3.8-Flash-Next",
-      "creator": "Alibaba",
-      "creator_slug": "alibaba",
-      "creator_color": "#ff7018",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/alibaba.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.6990274115575494,
-      "composite_ability_calibrated": 0.6930547027700893,
-      "release_date": "2026-08-26",
-      "release_timestamp": 1787702400.0,
-      "x_axis_position": 0.8478716628180023,
-      "in_chart": true,
-      "chart_y": 0.6981619541084693,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Qwen3.5 27B",
       "full_name": "Qwen3.5 27B (Reasoning)",
       "creator": "Alibaba",
@@ -4571,6 +4553,24 @@
       "x_axis_position": 0.4342786342149619,
       "in_chart": true,
       "chart_y": 0.6803907385563136,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "full_name": "Qwen3.8-Flash-Next",
+      "creator": "Alibaba",
+      "creator_slug": "alibaba",
+      "creator_color": "#ff7018",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/alibaba.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.6805091647083167,
+      "composite_ability_calibrated": 0.6829021287527639,
+      "release_date": "2026-08-26",
+      "release_timestamp": 1787702400.0,
+      "x_axis_position": 0.8478716628180023,
+      "in_chart": true,
+      "chart_y": 0.6795904573777024,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -5565,13 +5565,13 @@
       "brand_frontier_of": null
     },
     {
-      "model": "JT-4.1 Flash 236B A21B",
-      "full_name": "JT-4.1 Flash 236B A21B (Reasoning)",
+      "model": "JT-4.1 Flash 236B A21B 0709",
+      "full_name": "JT-4.1 Flash 236B A21B 0709 (Reasoning)",
       "creator": "China Mobile",
       "creator_slug": "china-mobile",
       "creator_color": "#00b8ea",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos/china-mobile.png",
-      "is_deprecated": false,
+      "is_deprecated": true,
       "composite_ability": 0.6003452061061335,
       "composite_ability_calibrated": 0.605546759635482,
       "release_date": "2026-07-09",
@@ -5889,13 +5889,13 @@
       "brand_frontier_of": null
     },
     {
-      "model": "JT-4.1 Flash 236B A21B (non-reasoning)",
-      "full_name": "JT-4.1 Flash 236B A21B (Non-reasoning)",
+      "model": "JT-4.1 Flash 236B A21B 0709 (non-reasoning)",
+      "full_name": "JT-4.1 Flash 236B A21B 0709 (Non-reasoning)",
       "creator": "China Mobile",
       "creator_slug": "china-mobile",
       "creator_color": "#00b8ea",
       "creator_logo_url": "https://artificialanalysis.ai/img/logos/china-mobile.png",
-      "is_deprecated": false,
+      "is_deprecated": true,
       "composite_ability": 0.5860226701642385,
       "composite_ability_calibrated": 0.552466476017442,
       "release_date": "2026-07-09",
@@ -6519,24 +6519,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "Solar Pro 4",
-      "full_name": "Solar Pro 4",
-      "creator": "Upstage",
-      "creator_slug": "upstage",
-      "creator_color": "#7c59f5",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/upstage.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.5401788774488079,
-      "composite_ability_calibrated": 0.5496267387764359,
-      "release_date": "2026-08-06",
-      "release_timestamp": 1785974400.0,
-      "x_axis_position": 0.8109065656486361,
-      "in_chart": true,
-      "chart_y": 0.5388566453551286,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Qwen3.6 27B (non-reasoning)",
       "full_name": "Qwen3.6 27B (Non-reasoning)",
       "creator": "Alibaba",
@@ -6911,6 +6893,24 @@
       "x_axis_position": 0.9698969048015791,
       "in_chart": true,
       "chart_y": 0.5118225303202462,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Solar Pro 4",
+      "full_name": "Solar Pro 4",
+      "creator": "Upstage",
+      "creator_slug": "upstage",
+      "creator_color": "#7c59f5",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/upstage.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.5124015253615022,
+      "composite_ability_calibrated": 0.5334974692542724,
+      "release_date": "2026-08-06",
+      "release_timestamp": 1785974400.0,
+      "x_axis_position": 0.8109065656486361,
+      "in_chart": true,
+      "chart_y": 0.5109994184978178,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -8873,6 +8873,24 @@
       "x_axis_position": 0.56692698710579,
       "in_chart": true,
       "chart_y": 0.3784261470383987,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "JT-4.1 Flash 236B A21B",
+      "full_name": "JT-4.1 Flash 236B A21B",
+      "creator": "China Mobile",
+      "creator_slug": "china-mobile",
+      "creator_color": "#00b8ea",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/china-mobile.png",
+      "is_deprecated": false,
+      "composite_ability": 0.37820415201183555,
+      "composite_ability_calibrated": 0.4751876540146583,
+      "release_date": "2026-11-11",
+      "release_timestamp": 1794355200.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.3764161557985147,
       "is_pareto": false,
       "brand_frontier_of": null
     },
