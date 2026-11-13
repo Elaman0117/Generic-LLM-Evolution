@@ -4,7 +4,7 @@
     "model_status": "All (including deprecated models)",
     "methodology": "20 evaluation metrics normalized [0,1], averaged → composite ability, then re-normalized linearly so best model = 1 and worst = 0; Pareto = non-dominated by release date (earlier is better); chart Y-axis (V17): y = 0 at the FIRST (lowest) level of the overall Pareto frontier — models below it are excluded from the chart but kept in the table; chart_y = (ability-y0)/(1-y0); X-axis: linear release-date mapping x = (ts-ts_min)/(xmax-ts_min) (xmax = 11 brand-frontier max); left edge = earliest date in DB; 11 brands get their own thin Pareto lines (brand theme colors, drawn above the solid gray overall Pareto line; vertices ordered by (axis_x, ability) so equal-cost points connect bottom-up); dark brand elements carry a narrow white outline on the black canvas; labels ride ON the Pareto lines when the adjacent segment allows (parallel to the line, mid-axis coincident, line gapped under the text, bare brand-colored text), else take the nearest free spot; every label = model family (brand-shared leading block stripped at the longest valid cut: ending at a separator, or at a letter followed by a digit in every name) plus thinking level, '(non-reasoning)' shortened to '(non)'; 2+ consecutive same-family vertices shorten to level-only labels after the run head (runs recomputed per brand; non-adjacent occurrences keep full labels)",
     "x_source": "AA leaderboard metadata (releaseDate)",
-    "total_models": 623,
+    "total_models": 627,
     "pareto_count": 20,
     "x_axis_mapping": {
       "mapping": "exp mapping x = (a^(b*t)-1)/(a^b-1), t normalized dates",
@@ -24,9 +24,9 @@
       "left_edge_cost": 1695772800.0,
       "left_edge_label": "2023-09",
       "free_models": 0,
-      "over_max_models": 1,
+      "over_max_models": 5,
       "plotted_models": 621,
-      "total_models": 623,
+      "total_models": 627,
       "min_positive_cost": 1695772800.0,
       "x_at_min_positive_cost": 0.0,
       "max_cost": 1794182400.0,
@@ -54,22 +54,22 @@
       "y_axis": {
         "baseline": 0.0028672907900788446,
         "baseline_model": "Mistral 7B",
-        "visible_models": 622,
-        "plotted_models": 622,
+        "visible_models": 626,
+        "plotted_models": 626,
         "no_x_visible": 0,
         "below_baseline": 1,
-        "total_models": 623,
+        "total_models": 627,
         "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
       }
     },
     "y_axis": {
       "baseline": 0.0028672907900788446,
       "baseline_model": "Mistral 7B",
-      "visible_models": 622,
-      "plotted_models": 622,
+      "visible_models": 626,
+      "plotted_models": 626,
       "no_x_visible": 0,
       "below_baseline": 1,
-      "total_models": 623,
+      "total_models": 627,
       "note": "chart y = (ability - baseline)/(1 - baseline); models below the first overall-Pareto level are excluded from the chart but kept in the README table"
     },
     "x_axis_distribution": {
@@ -98,7 +98,7 @@
     "AA Intelligence Index": {
       "min": 1.81584603785463,
       "max": 64.563595756626,
-      "count": 122
+      "count": 126
     },
     "GPQA Diamond": {
       "min": 0.09797979797979799,
@@ -138,17 +138,17 @@
     "AA Omniscience Index": {
       "min": -71.16666666666667,
       "max": 66.76666666666667,
-      "count": 135
+      "count": 140
     },
     "AA-Omniscience Accuracy": {
       "min": 0.091,
       "max": 0.7913333333333333,
-      "count": 135
+      "count": 140
     },
     "AA-Omniscience Non-Hallucination": {
       "min": 0.04354280059376546,
       "max": 0.9575718015665796,
-      "count": 135
+      "count": 140
     },
     "GDPval-AA Normalized": {
       "min": -402.18,
@@ -193,7 +193,7 @@
     "Terminal-Bench 4.0": {
       "min": 0.0,
       "max": 0.6717171717171717,
-      "count": 253
+      "count": 257
     }
   },
   "benchmark_calibration": {
@@ -207,7 +207,7 @@
         "upper": 1.0,
         "span": 0.8217142562531266,
         "metric_label": "AA Intelligence Index",
-        "model_count": 122
+        "model_count": 126
       },
       "gpqa": {
         "lower": 0.0,
@@ -263,21 +263,21 @@
         "upper": 1.0,
         "span": 0.8217142562531266,
         "metric_label": "AA Omniscience Index",
-        "model_count": 135
+        "model_count": 140
       },
       "omniscienceAccuracy": {
         "lower": 0.17588071904092634,
         "upper": 1.0,
         "span": 0.8241192809590736,
         "metric_label": "AA-Omniscience Accuracy",
-        "model_count": 135
+        "model_count": 140
       },
       "omniscienceNonHallucination": {
         "lower": 0.16422411425459182,
         "upper": 1.0,
         "span": 0.8357758857454082,
         "metric_label": "AA-Omniscience Non-Hallucination",
-        "model_count": 135
+        "model_count": 140
       },
       "gdpvalNormalized": {
         "lower": 0.040156078244570084,
@@ -340,7 +340,7 @@
         "upper": 1.0,
         "span": 0.9602513345279455,
         "metric_label": "Terminal-Bench 4.0",
-        "model_count": 253
+        "model_count": 257
       }
     }
   },
@@ -2703,6 +2703,24 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Gemini 4 Hydrogen (xhigh)",
+      "full_name": "Gemini 4 Hydrogen (Xhigh)",
+      "creator": "Google",
+      "creator_slug": "google",
+      "creator_color": "#34A853",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/google.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.8688738262673228,
+      "composite_ability_calibrated": 0.8915211700191,
+      "release_date": "2026-11-12",
+      "release_timestamp": 1794441600.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.8684967682620951,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "GPT-5.4 (xhigh)",
       "full_name": "GPT-5.4 (Xhigh)",
       "creator": "OpenAI",
@@ -2915,6 +2933,24 @@
       "x_axis_position": 0.9141004442666948,
       "in_chart": true,
       "chart_y": 0.847263669881904,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Gemini 4 Hydrogen (high)",
+      "full_name": "Gemini 4 Hydrogen (High)",
+      "creator": "Google",
+      "creator_slug": "google",
+      "creator_color": "#34A853",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/google.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.8470179692352287,
+      "composite_ability_calibrated": 0.8740423384616229,
+      "release_date": "2026-11-12",
+      "release_timestamp": 1794441600.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.8465780639309418,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -4157,6 +4193,24 @@
       "x_axis_position": 0.9698969048015791,
       "in_chart": true,
       "chart_y": 0.7167524168919721,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "Gemini 4 Hydrogen (medium)",
+      "full_name": "Gemini 4 Hydrogen (Medium)",
+      "creator": "Google",
+      "creator_slug": "google",
+      "creator_color": "#34A853",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/google.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.7171244518773282,
+      "composite_ability_calibrated": 0.7573889725409468,
+      "release_date": "2026-11-12",
+      "release_timestamp": 1794441600.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.7163110331153328,
       "is_pareto": false,
       "brand_frontier_of": null
     },
@@ -6357,6 +6411,24 @@
       "brand_frontier_of": null
     },
     {
+      "model": "Gemini 4 Hydrogen (low)",
+      "full_name": "Gemini 4 Hydrogen (Low)",
+      "creator": "Google",
+      "creator_slug": "google",
+      "creator_color": "#34A853",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/google.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.5562497199029136,
+      "composite_ability_calibrated": 0.6164873864514842,
+      "release_date": "2026-11-12",
+      "release_timestamp": 1794441600.0,
+      "x_axis_position": 1.0,
+      "in_chart": false,
+      "chart_y": 0.5549737000918441,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
       "model": "Muse Ember (xhigh)",
       "full_name": "Muse Ember (Xhigh)",
       "creator": "Meta",
@@ -7329,24 +7401,6 @@
       "brand_frontier_of": null
     },
     {
-      "model": "A.X-K2",
-      "full_name": "A.X-K2",
-      "creator": "SK Telecom",
-      "creator_slug": "sk-telecom",
-      "creator_color": "#E1002A",
-      "creator_logo_url": "https://artificialanalysis.ai/img/logos/sktelecom.svg",
-      "is_deprecated": false,
-      "composite_ability": 0.4860281682612439,
-      "composite_ability_calibrated": 0.4752821621307934,
-      "release_date": "2026-08-12",
-      "release_timestamp": 1786492800.0,
-      "x_axis_position": 0.821845852094201,
-      "in_chart": true,
-      "chart_y": 0.48455022386538493,
-      "is_pareto": false,
-      "brand_frontier_of": null
-    },
-    {
       "model": "Gemma 4 26B A4B",
       "full_name": "Gemma 4 26B A4B (Reasoning)",
       "creator": "Google",
@@ -7613,6 +7667,24 @@
       "x_axis_position": 0.9869984689330227,
       "in_chart": true,
       "chart_y": 0.4737578044591796,
+      "is_pareto": false,
+      "brand_frontier_of": null
+    },
+    {
+      "model": "A.X-K2",
+      "full_name": "A.X-K2",
+      "creator": "SK Telecom",
+      "creator_slug": "sk-telecom",
+      "creator_color": "#E1002A",
+      "creator_logo_url": "https://artificialanalysis.ai/img/logos/sktelecom.svg",
+      "is_deprecated": false,
+      "composite_ability": 0.47503164726858516,
+      "composite_ability_calibrated": 0.4940689360469858,
+      "release_date": "2026-08-12",
+      "release_timestamp": 1786492800.0,
+      "x_axis_position": 0.821845852094201,
+      "in_chart": true,
+      "chart_y": 0.4735220819830753,
       "is_pareto": false,
       "brand_frontier_of": null
     },
